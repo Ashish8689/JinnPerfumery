@@ -1,42 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --main-color: #7a57d1;
+    --main-light-color: rgba(122, 87, 209, 0.4);
+    --title-color: #ffffff;
+    --bold-color: #3f3b3b;
+    --bold-light-color: #5e5147;
+    --text-color: #5c5c5c;
+    --light-color: #dee1ec;
+    --box-shadow: rgba(122, 87, 209, 0.5);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Balsamiq Sans';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
 }
 
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
 a {
-  color: inherit;
-  text-decoration: none;
+    text-decoration: none;
+    color: var(--bold-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+    text-decoration: none !important;
+}
+
+.loading {
+    width: 200px;
+    height: 200px;
+}
+
+.m-t-lg {
+    margin-top: 24px;
+}
+
+.mx-2 {
+    margin: 0 6px;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-none,
+.d-none-large {
+    display: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-bold {
+    color: var(--bold-color);
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    padding: 0 15px;
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .d-none-small {
+        display: none;
+    }
+
+    .d-none-large {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* ******************   Animation    *********************** */
+
+.box-bar {
+    width: 80px;
+    height: 80px;
+    border: 15px solid var(--main-color);
+}
+
+.circle-round {
+    width: 80px;
+    height: 80px;
+    border: 15px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.box-fill {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+    background: var(--main-color);
+    opacity: 0.3;
+}
+
+.box-mini-bar {
+    position: absolute;
+    bottom: 47px;
+    left: 22px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--main-color);
+    opacity: 0.2;
+    border-radius: 2px;
+}
+
+/* *******************   Button start  ******************** */
+
+.button-container {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-block;
+    width: 150px;
+    padding: 10px 20px;
+    border: 2px solid var(--main-color);
+    color: var(--main-color);
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+.button.active {
+    background: var(--main-color);
+    color: var(--title-color);
+}
+
+.button:hover {
+    background: var(--main-color);
+    color: var(--title-color);
+    box-shadow: 0px 2px 30px rgba(122, 87, 209, 0.6);
+}
+
+.button.active:hover {
+    background: transparent;
+    color: var(--main-color);
+}
+
+/* ********  Button end  ******** */
+
+/* ****************  Section flex  *****************  */
+
+.section-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-flex .section-left,
+.section-flex .section-right {
+    flex: 50%;
+}
+
+@media (max-width: 768px) {
+    .section-flex .section-left,
+    .section-flex .section-right {
+        flex: 100%;
+    }
 }
