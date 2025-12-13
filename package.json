@@ -16,7 +16,9 @@
     "dependencies": {
         "next": "16.0.7",
         "react": "19.2.0",
-        "react-dom": "19.2.0"
+        "react-dom": "19.2.0",
+        "swiper": "^12.0.3",
+        "yet-another-react-lightbox": "^3.27.0"
     },
     "devDependencies": {
         "@svgr/webpack": "^8.1.0",
