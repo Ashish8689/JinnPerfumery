@@ -1,26 +1,36 @@
 {
-  "name": "jinn-perfumery",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
-  },
-  "dependencies": {
-    "next": "16.0.7",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
-  },
-  "devDependencies": {
-    "@svgr/webpack": "^8.1.0",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "babel-plugin-react-compiler": "1.0.0",
-    "eslint": "^9",
-    "eslint-config-next": "16.0.7",
-    "typescript": "^5"
-  }
+    "name": "jinn-perfumery",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "prettier-check": "prettier . --check",
+        "prettier-fix": "prettier . --write",
+        "eslint-check": "eslint '**/*.{ts,tsx,js}' --no-error-on-unmatched-pattern",
+        "eslint-fix": "eslint '**/*.{ts,tsx,js}' --no-error-on-unmatched-pattern --fix",
+        "lint": "yarn run eslint-fix && yarn run prettier-fix",
+        "lint-check": "yarn run eslint-check  && yarn run prettier-check"
+    },
+    "dependencies": {
+        "next": "16.0.7",
+        "react": "19.2.0",
+        "react-dom": "19.2.0"
+    },
+    "devDependencies": {
+        "@svgr/webpack": "^8.1.0",
+        "@types/node": "^20",
+        "@types/react": "^19",
+        "@types/react-dom": "^19",
+        "@typescript-eslint/eslint-plugin": "^8.49.0",
+        "@typescript-eslint/parser": "^8.49.0",
+        "babel-plugin-react-compiler": "1.0.0",
+        "eslint": "^9",
+        "eslint-config-next": "16.0.7",
+        "eslint-plugin-react": "^7.37.5",
+        "eslint-plugin-react-hooks": "^7.0.1",
+        "prettier": "^3.7.4",
+        "typescript": "^5"
+    }
 }

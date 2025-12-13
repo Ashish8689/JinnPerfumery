@@ -60,5 +60,4 @@ export const SOCIAL_LINK_OPTIONS = [
     },
 ]
 
-// eslint-disable-next-line no-useless-escape
 export const REGEX_SCROLL = /.*\#/
