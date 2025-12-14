@@ -4,7 +4,7 @@
     text-align: center;
 }
 
-.why-trust-us-title {
+.why-trust-us .why-trust-us-title {
     color: #ffffff;
     font-size: 48px;
     font-weight: 400;
@@ -12,7 +12,7 @@
     font-family: 'Georgia', serif;
 }
 
-.features-grid {
+.why-trust-us .features-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 40px;
@@ -22,25 +22,25 @@
 }
 
 @media (min-width: 768px) {
-    .features-grid {
+    .why-trust-us .features-grid {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media (min-width: 1200px) {
-    .features-grid {
+    .why-trust-us .features-grid {
         grid-template-columns: repeat(6, 1fr);
     }
 }
 
-.feature-item {
+.why-trust-us .features-grid .feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
 
-.icon-wrapper {
+.why-trust-us .features-grid .feature-item .icon-wrapper {
     width: 140px;
     height: 140px;
     background-color: #b8a074;
@@ -52,54 +52,54 @@
     transition: transform 0.3s ease;
 }
 
-.icon-wrapper:hover {
+.why-trust-us .features-grid .feature-item .icon-wrapper:hover {
     transform: scale(1.05);
 }
 
-.feature-icon {
+.why-trust-us .features-grid .feature-item .feature-icon {
     width: 60px;
     height: 60px;
 }
 
-.feature-text {
+.why-trust-us .features-grid .feature-item .feature-text {
     color: #ffffff;
 }
 
-.feature-title {
+.why-trust-us .features-grid .feature-item .feature-title {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.3;
 }
 
-.feature-subtitle {
+.why-trust-us .features-grid .feature-item .feature-subtitle {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.3;
 }
 
 @media (max-width: 767px) {
-    .why-trust-us-title {
+    .why-trust-us .why-trust-us-title {
         font-size: 36px;
         margin-bottom: 40px;
     }
 
-    .features-grid {
+    .why-trust-us .features-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 30px;
     }
 
-    .icon-wrapper {
+    .why-trust-us .features-grid .feature-item .icon-wrapper {
         width: 120px;
         height: 120px;
     }
 
-    .feature-icon {
+    .why-trust-us .features-grid .feature-item .feature-icon {
         width: 50px;
         height: 50px;
     }
 
-    .feature-title,
-    .feature-subtitle {
+    .why-trust-us .features-grid .feature-item .feature-title,
+    .why-trust-us .features-grid .feature-item .feature-subtitle {
         font-size: 16px;
     }
 }

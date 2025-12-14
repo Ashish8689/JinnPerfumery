@@ -1,65 +1,20 @@
-import React from 'react'
+'use client'
+
+import React, { useMemo } from 'react'
+import Image from 'next/image'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import './LatestArrivals.styles.css'
-
-interface ArrivalProduct {
-    id: string
-    name: string
-    brand: string
-    image: string
-    originalPrice: number
-    salePrice: number
-    onSale?: boolean
-}
-
-const latestProducts: ArrivalProduct[] = [
-    {
-        id: '1',
-        name: 'Soul of Bali Extrait De Parfum For Unisex',
-        brand: 'Swiss Arabian',
-        image: '/products/soul-of-bali.jpg',
-        originalPrice: 8950.0,
-        salePrice: 4990.0,
-        onSale: true,
-    },
-    {
-        id: '2',
-        name: 'Granada Eau De Parfum For Men',
-        brand: 'Rayhaan',
-        image: '/products/granada.jpg',
-        originalPrice: 3500.0,
-        salePrice: 2550.0,
-        onSale: true,
-    },
-    {
-        id: '3',
-        name: 'Seville Eau De Parfum For Men',
-        brand: 'Rayhaan',
-        image: '/products/seville.jpg',
-        originalPrice: 3550.0,
-        salePrice: 2550.0,
-        onSale: true,
-    },
-    {
-        id: '4',
-        name: 'Cadiz Eau De Parfum For Men',
-        brand: 'Rayhaan',
-        image: '/products/cadiz.jpg',
-        originalPrice: 3500.0,
-        salePrice: 2350.0,
-        onSale: true,
-    },
-    {
-        id: '5',
-        name: 'Odyssey BAHAMAS Eau De Parfum For Unisex',
-        brand: 'Armaf',
-        image: '/products/odyssey-bahamas.jpg',
-        originalPrice: 3650.0,
-        salePrice: 3250.0,
-        onSale: true,
-    },
-]
+import { PRODUCT_LIST } from '@/constant/productList.constant'
 
 const LatestArrivals: React.FC = () => {
+    const latestProducts = useMemo(() => {
+        return PRODUCT_LIST.filter((product) => product.isLatest)
+    }, [])
+
     const calculateSavings = (original: number, sale: number): number => {
         return original - sale
     }
@@ -72,45 +27,78 @@ const LatestArrivals: React.FC = () => {
         <section className="latest-arrivals">
             <div className="latest-arrivals-container">
                 <h2 className="latest-arrivals-title">Latest Arrivals</h2>
-                <button className="view-all-button">VIEW ALL</button>
-
-                <div className="arrivals-grid">
-                    {latestProducts.map((product) => (
-                        <div className="arrival-card" key={product.id}>
-                            <div className="arrival-image-container">
-                                {product.onSale && (
-                                    <div className="sale-badge">Sale</div>
-                                )}
-                                <img
-                                    alt={product.name}
-                                    className="arrival-image"
-                                    src={product.image}
-                                />
-                            </div>
-                            <div className="arrival-details">
-                                <h3 className="arrival-name">
-                                    {product.brand} {product.name}
-                                </h3>
-                                <div className="arrival-pricing">
-                                    <span className="original-price">
-                                        {formatPrice(product.originalPrice)}
-                                    </span>
-                                    <span className="sale-price">
-                                        {formatPrice(product.salePrice)}
-                                    </span>
+                <div className="arrivals-carousel">
+                    <Swiper
+                        loop
+                        navigation
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false,
+                        }}
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 25,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 30,
+                            },
+                        }}
+                        className="arrivals-swiper"
+                        modules={[Navigation, Pagination, Autoplay]}
+                        pagination={{ clickable: true }}
+                        slidesPerView={4}
+                        spaceBetween={30}
+                    >
+                        {latestProducts.map((product) => (
+                            <SwiperSlide key={product.id}>
+                                <div className="arrival-card">
+                                    <div className="arrival-image-container">
+                                        <Image
+                                            fill
+                                            alt={product.name}
+                                            className="arrival-image"
+                                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
+                                            src={product.image}
+                                        />
+                                    </div>
+                                    <div className="arrival-details">
+                                        <h3 className="arrival-name">
+                                            {product.name}
+                                        </h3>
+                                        <div className="arrival-pricing">
+                                            <span className="original-price">
+                                                {formatPrice(
+                                                    product.originalPrice,
+                                                )}
+                                            </span>
+                                            <span className="sale-price">
+                                                {formatPrice(product.salePrice)}
+                                            </span>
+                                        </div>
+                                        <p className="savings">
+                                            Save{' '}
+                                            {formatPrice(
+                                                calculateSavings(
+                                                    product.originalPrice,
+                                                    product.salePrice,
+                                                ),
+                                            )}
+                                        </p>
+                                    </div>
                                 </div>
-                                <p className="savings">
-                                    Save{' '}
-                                    {formatPrice(
-                                        calculateSavings(
-                                            product.originalPrice,
-                                            product.salePrice,
-                                        ),
-                                    )}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </section>

@@ -1,0 +1,41 @@
+<svg fill="none" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M38 12L42 8L46 12"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M42 8V18"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M52 20L56 16L60 20"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M56 16V24"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M28 28C28 24 30 20 36 20C42 20 44 24 44 28V48C44 52 40 56 36 56C32 56 28 52 28 48V28Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M28 40H44"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeWidth="2"
+    />
+</svg>

@@ -1,0 +1,30 @@
+<svg fill="none" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+    <path
+        d="M32 48C32 48 20 40 20 28C20 20 24 12 32 12C40 12 44 20 44 28C44 40 32 48 32 48Z"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M32 12C32 12 28 16 24 20"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M32 12C32 12 36 16 40 20"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+    <path
+        d="M28 28C28 28 30 32 32 32C34 32 36 28 36 28"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+    />
+</svg>

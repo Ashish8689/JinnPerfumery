@@ -14,25 +14,6 @@ export enum SOCIAL_LINKS {
     FACEBOOK = 'https://www.facebook.com/profile.php?id=100004838256907',
 }
 
-export const NAV_LINKS = [
-    {
-        page: 'Home',
-        link: '#home',
-    },
-    {
-        page: 'About',
-        link: '#about',
-    },
-    {
-        page: 'Portfolio',
-        link: '#portfolio',
-    },
-    {
-        page: 'Contact',
-        link: '#contact',
-    },
-]
-
 export const SOCIAL_LINK_OPTIONS = [
     {
         icon: GitHub,

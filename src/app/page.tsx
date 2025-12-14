@@ -11,12 +11,12 @@ import WhyTrustUs from '@/component/WhyTrustUs/WhyTrustUs.component'
 export default function Home(): React.JSX.Element {
     return (
         <div className="main">
-            <TopBanner />
             <HeroCarousel />
+            <TopBanner />
             <LatestArrivals />
+            <WhyChooseUs />
             <BestSeller />
             <ShopByCategory />
-            <WhyChooseUs />
             <WhyTrustUs />
             <Testimonials />
             <InstagramSection />

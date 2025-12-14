@@ -3,3 +3,6 @@ tabWidth: 4
 htmlWhitespaceSensitivity: 'strict'
 singleQuote: true
 semi: false
+plugins:
+    - '@prettier/plugin-xml'
+xmlWhitespaceSensitivity: 'ignore'

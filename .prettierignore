@@ -12,7 +12,6 @@ dist/
 tsbuildinfo/
 
 # Assets
-*.svg
 *.png
 *.ico
 *.ttf

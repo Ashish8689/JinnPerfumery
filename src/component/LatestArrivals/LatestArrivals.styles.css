@@ -1,5 +1,5 @@
 .latest-arrivals {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background-color: #f9f9f9;
 }
 
@@ -17,49 +17,55 @@
     color: #1a1a1a;
 }
 
-.view-all-button {
-    display: block;
-    margin: 0 auto 50px;
-    padding: 12px 40px;
-    border: 2px solid #1a1a1a;
-    background-color: transparent;
-    color: #1a1a1a;
-    font-size: 0.9rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+.arrivals-carousel {
+    padding-top: 50px;
+    position: relative;
 }
 
-.view-all-button:hover {
+.arrivals-swiper {
+    padding: 0 30px 30px;
+}
+
+.arrivals-swiper .swiper-button-next,
+.arrivals-swiper .swiper-button-prev {
+    color: #1a1a1a;
+    background-color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+}
+
+.arrivals-swiper .swiper-button-next svg,
+.arrivals-swiper .swiper-button-prev svg {
+    width: 15px;
+    height: 15px;
+}
+
+.arrivals-swiper .swiper-button-next:hover,
+.arrivals-swiper .swiper-button-prev:hover {
     background-color: #1a1a1a;
     color: #ffffff;
 }
 
-.arrivals-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.arrivals-swiper .swiper-pagination-bullet {
+    display: none;
+    background-color: #1a1a1a;
+    opacity: 0.3;
 }
 
-@media (min-width: 768px) {
-    .arrivals-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1200px) {
-    .arrivals-grid {
-        grid-template-columns: repeat(5, 1fr);
-    }
+.arrivals-swiper .swiper-pagination-bullet-active {
+    opacity: 1;
 }
 
 .arrival-card {
     background-color: #ffffff;
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
     cursor: pointer;
 }
 
@@ -74,6 +80,10 @@
     aspect-ratio: 3/4;
     overflow: hidden;
     background-color: #f5f5f5;
+}
+
+.arrival-image-container img {
+    object-position: center;
 }
 
 .sale-badge {

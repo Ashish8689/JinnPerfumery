@@ -54,8 +54,12 @@ const ShopByCategory: React.FC = () => {
                                 <div className="category-overlay" />
                             </div>
                             <div className="category-content">
-                                <h3 className="category-title">{category.title}</h3>
-                                <p className="category-subtitle">{category.subtitle}</p>
+                                <h3 className="category-title">
+                                    {category.title}
+                                </h3>
+                                <p className="category-subtitle">
+                                    {category.subtitle}
+                                </p>
                                 <span className="category-arrow">→</span>
                             </div>
                         </Link>
