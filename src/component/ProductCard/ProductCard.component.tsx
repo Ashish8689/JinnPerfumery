@@ -1,5 +1,6 @@
 import React from 'react'
 import './ProductCard.css'
+import Image from 'next/image'
 
 export interface Product {
     id: string
@@ -10,10 +11,6 @@ export interface Product {
     notes: string
     volume: string
     price: string
-    badge?: {
-        text: string
-        position: 'top-left' | 'top-right'
-    }
 }
 
 interface ProductCardProps {
@@ -24,12 +21,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <div className="product-card">
             <div className="product-image-container">
-                {product.badge && (
-                    <div className={`product-badge ${product.badge.position}`}>
-                        {product.badge.text}
-                    </div>
-                )}
-                <img
+                <Image
+                    fill
                     alt={product.name}
                     className="product-image"
                     src={product.image}
@@ -43,7 +36,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                 <p className="product-volume">{product.volume}</p>
                 <p className="product-price">{product.price}</p>
             </div>
-            <button className="product-check-button">
+            {/* <button className="product-check-button">
                 CHECK
                 <span className="button-arrow">→</span>
                 <span className="button-icon">
@@ -59,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                         <path d="M3 21L21 3" />
                     </svg>
                 </span>
-            </button>
+            </button> */}
         </div>
     )
 }

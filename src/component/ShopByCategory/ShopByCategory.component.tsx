@@ -19,14 +19,14 @@ const ShopByCategory: React.FC = () => {
             id: '1',
             title: 'FOR HIM',
             subtitle: 'Discover masculine fragrances',
-            image: '/images/category/for-him.jpg',
+            image: '/images/category/him.webp',
             link: '/category/for-him',
         },
         {
             id: '2',
             title: 'FOR HER',
             subtitle: 'Explore feminine fragrances',
-            image: '/images/category/for-her.jpg',
+            image: '/images/category/her.webp',
             link: '/category/for-her',
         },
     ]
@@ -44,12 +44,12 @@ const ShopByCategory: React.FC = () => {
                         >
                             <div className="category-image-container">
                                 <Image
-                                    fill
                                     alt={category.title}
                                     className="category-image"
+                                    height={100}
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                     src={category.image}
-                                    style={{ objectFit: 'cover' }}
+                                    width={100}
                                 />
                                 <div className="category-overlay" />
                             </div>
