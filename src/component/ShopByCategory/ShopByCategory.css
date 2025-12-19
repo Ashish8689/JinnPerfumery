@@ -1,6 +1,5 @@
 .shop-by-category-section {
     padding: 80px 0;
-    background-color: #f8f8f8;
 }
 
 .category-main-title {
@@ -9,7 +8,7 @@
     text-align: center;
     margin-bottom: 50px;
     letter-spacing: 2px;
-    color: #1a1a1a;
+    color: var(--bold-color);
 }
 
 .categories-grid {

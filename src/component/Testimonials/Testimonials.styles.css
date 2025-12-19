@@ -1,6 +1,6 @@
 .testimonials-section {
     padding: 80px 20px;
-    background-color: #f3ebe5;
+    /* background-color: #f8f8f8; */
 }
 
 .testimonials-container {
@@ -13,7 +13,8 @@
     font-size: 0.9rem;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #666;
+    /* color: #666; */
+    color: var(--bold-color);
     margin-bottom: 15px;
 }
 
@@ -21,8 +22,9 @@
     text-align: center;
     font-size: 3rem;
     font-weight: 400;
-    font-family: serif;
-    color: #4a5568;
+    /* font-family: serif; */
+    /* color: #4a5568; */
+    color: var(--bold-color);
     margin-bottom: 40px;
 }
 
@@ -32,6 +34,8 @@
     justify-content: center;
     gap: 20px;
     background: linear-gradient(135deg, #ec4899 0%, #f472b6 100%);
+    /* background: #ffffff; */
+    background: #4a5568;
     padding: 20px 40px;
     border-radius: 50px;
     max-width: 600px;
@@ -60,7 +64,8 @@
 
 .badge-count {
     background-color: white;
-    color: #ec4899;
+    /* color: #ec4899; */
+    color: #4a5568;
     font-weight: 700;
     font-size: 1.2rem;
     padding: 8px 20px;
@@ -106,6 +111,7 @@
         box-shadow 0.3s ease;
     cursor: pointer;
     background: #f472b6;
+    background: #4a5568;
 }
 
 .testimonial-card:hover {

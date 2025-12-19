@@ -12,8 +12,8 @@ export default function Home(): React.JSX.Element {
             <HeroCarousel />
             <LatestArrivals />
             <WhyChooseUs />
-            <BestSeller />
             <ShopByCategory />
+            <BestSeller />
             <WhyTrustUs />
             <Testimonials />
         </div>

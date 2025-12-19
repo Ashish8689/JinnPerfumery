@@ -10,7 +10,7 @@ const Testimonials: React.FC = () => {
     return (
         <section className="testimonials-section">
             <div className="testimonials-container">
-                <p className="testimonials-label">TESTIMONIALS</p>
+                {/* <p className="testimonials-label">TESTIMONIALS</p> */}
                 <h2 className="testimonials-title">Voices of Jinn Perfumery</h2>
 
                 <div className="testimonials-badge">

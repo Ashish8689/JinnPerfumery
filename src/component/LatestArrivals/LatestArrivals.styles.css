@@ -1,6 +1,5 @@
 .latest-arrivals {
-    padding: 100px 20px;
-    background-color: #f9f9f9;
+    padding: 60px 20px;
 }
 
 .latest-arrivals-container {
@@ -13,8 +12,15 @@
     font-size: 2.5rem;
     font-weight: 600;
     text-align: center;
+    color: var(--bold-color);
+}
+
+.latest-arrivals-sub-title {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
     margin-bottom: 20px;
-    color: #1a1a1a;
+    color: #383838;
 }
 
 .arrivals-carousel {
@@ -28,7 +34,7 @@
 
 .arrivals-swiper .swiper-button-next,
 .arrivals-swiper .swiper-button-prev {
-    color: #1a1a1a;
+    color: var(--bold-color);
     background-color: #ffffff;
     width: 40px;
     height: 40px;
@@ -45,13 +51,13 @@
 
 .arrivals-swiper .swiper-button-next:hover,
 .arrivals-swiper .swiper-button-prev:hover {
-    background-color: #1a1a1a;
+    background-color: var(--bold-color);
     color: #ffffff;
 }
 
 .arrivals-swiper .swiper-pagination-bullet {
     display: none;
-    background-color: #1a1a1a;
+    background-color: var(--bold-color);
     opacity: 0.3;
 }
 
@@ -117,7 +123,7 @@
 .arrival-name {
     font-size: 0.95rem;
     font-weight: 500;
-    color: #1a1a1a;
+    color: var(--bold-color);
     margin-bottom: 12px;
     line-height: 1.4;
     min-height: 2.8em;
@@ -143,7 +149,7 @@
 .sale-price {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #1a1a1a;
+    color: var(--bold-color);
 }
 
 .savings {

@@ -1,15 +1,14 @@
 .why-trust-us {
-    background-color: #3d1f1a;
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background-color: var(--background-color);
 }
 
 .why-trust-us .why-trust-us-title {
-    color: #ffffff;
     font-size: 48px;
     font-weight: 400;
     margin: 0 0 60px 0;
-    font-family: 'Georgia', serif;
+    color: var(--bold-color);
 }
 
 .why-trust-us .features-grid {
@@ -38,17 +37,18 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    cursor: pointer;
 }
 
 .why-trust-us .features-grid .feature-item .icon-wrapper {
     width: 140px;
     height: 140px;
-    background-color: #b8a074;
+    background: var(--main-color);
     border-radius: 50% 45% 50% 45%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    color: var(--background-color);
     transition: transform 0.3s ease;
 }
 
@@ -62,7 +62,7 @@
 }
 
 .why-trust-us .features-grid .feature-item .feature-text {
-    color: #ffffff;
+    /* color: #ffffff; */
 }
 
 .why-trust-us .features-grid .feature-item .feature-title {

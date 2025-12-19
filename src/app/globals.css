@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@400;700&display=swap');
 
 :root {
-    --main-color: #7a57d1;
-    --main-light-color: rgba(122, 87, 209, 0.4);
+    --main-color: #4a5568;
     --title-color: #ffffff;
     --bold-color: #3f3b3b;
     --bold-light-color: #5e5147;
     --text-color: #5c5c5c;
     --light-color: #dee1ec;
-    --box-shadow: rgba(122, 87, 209, 0.5);
+    --background-color: #f9f9f9;
 }
 
 * {

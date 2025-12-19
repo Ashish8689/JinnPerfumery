@@ -1,7 +1,10 @@
 /* BestSeller Section */
 .bestseller-section {
     padding: 80px 0;
-    background-color: var(--title-color);
+    /* background-color: var(--title-color); */
+    /* background-color: #f8f8f8; */
+    /* background-color: var(--main-color); */
+
     position: relative;
 }
 

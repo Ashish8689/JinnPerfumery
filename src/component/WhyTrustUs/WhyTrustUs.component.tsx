@@ -43,7 +43,7 @@ const WhyTrustUs: React.FC = () => {
 
     return (
         <section className="why-trust-us">
-            <h2 className="why-trust-us-title">Why Trust Us?</h2>
+            <h2 className="why-trust-us-title">Why Trust Us ? </h2>
             <div className="features-grid">
                 {features.map((feature) => (
                     <div className="feature-item" key={feature.title}>

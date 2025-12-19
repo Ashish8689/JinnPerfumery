@@ -38,18 +38,17 @@ const menuItems: MenuItem[] = [
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null)
-    const [isSearchOpen, setIsSearchOpen] = useState(false)
 
-    const toggleMenu = () => {
+    const toggleMenu = (): void => {
         setIsMenuOpen(!isMenuOpen)
         setActiveSubmenu(null)
     }
 
-    const handleSubmenuClick = (label: string) => {
+    const handleSubmenuClick = (label: string): void => {
         setActiveSubmenu(activeSubmenu === label ? null : label)
     }
 
-    const handleBackClick = () => {
+    const handleBackClick = (): void => {
         setActiveSubmenu(null)
     }
 
@@ -58,9 +57,9 @@ const Navbar: React.FC = () => {
             <nav className="navbar">
                 <div className="navbar-container">
                     <button
+                        aria-label="Toggle menu"
                         className="menu-toggle"
                         onClick={toggleMenu}
-                        aria-label="Toggle menu"
                     >
                         {isMenuOpen ? (
                             <svg
@@ -91,25 +90,6 @@ const Navbar: React.FC = () => {
                         <span className="menu-label">Menu</span>
                     </button>
 
-                    <button
-                        aria-label="Toggle search"
-                        className="search-toggle"
-                        onClick={() => setIsSearchOpen(!isSearchOpen)}
-                    >
-                        <svg
-                            fill="none"
-                            height="24"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            viewBox="0 0 24 24"
-                            width="24"
-                        >
-                            <circle cx="11" cy="11" r="8" />
-                            <path d="m21 21-4.35-4.35" />
-                        </svg>
-                        <span className="search-label">Search</span>
-                    </button>
-
                     <Link className="navbar-logo" href="/">
                         <span className="logo-icon">JN</span>
                         <span className="logo-text">
@@ -121,29 +101,12 @@ const Navbar: React.FC = () => {
                 </div>
             </nav>
 
-            {/* Search Overlay */}
-            <div className={`search-overlay ${isSearchOpen ? 'active' : ''}`}>
-                <div className="search-container">
-                    <input
-                        className="search-input"
-                        placeholder="Search for products..."
-                        type="text"
-                    />
-                    <button
-                        className="search-close"
-                        onClick={() => setIsSearchOpen(false)}
-                    >
-                        ✕
-                    </button>
-                </div>
-            </div>
-
             {/* Sidebar Menu */}
             <button
-                className={`sidebar-overlay ${isMenuOpen ? 'active' : ''}`}
-                onClick={toggleMenu}
                 aria-label="Close menu"
+                className={`sidebar-overlay ${isMenuOpen ? 'active' : ''}`}
                 type="button"
+                onClick={toggleMenu}
             />
             <div className={`sidebar ${isMenuOpen ? 'active' : ''}`}>
                 <div className="sidebar-content">
