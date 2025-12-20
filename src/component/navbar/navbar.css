@@ -75,6 +75,34 @@
     text-align: center;
 }
 
+/* Desktop Menu */
+.desktop-menu {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 40px;
+    align-items: center;
+    margin-left: auto;
+}
+
+.desktop-menu li {
+    margin: 0;
+}
+
+.desktop-menu a {
+    text-decoration: none;
+    color: var(--bold-color);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.desktop-menu a:hover {
+    color: #a0892c;
+}
+
 /* Search Overlay */
 .search-overlay {
     position: fixed;
@@ -175,6 +203,23 @@
     height: 100%;
     overflow-y: auto;
     position: relative;
+}
+
+.sidebar-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--bold-color);
+    cursor: pointer;
+    padding: 8px;
+    z-index: 20;
+    transition: color 0.3s ease;
+}
+
+.sidebar-close:hover {
+    color: #666;
 }
 
 /* Menu Panel */
@@ -283,6 +328,21 @@
 }
 
 /* Responsive */
+@media (min-width: 1024px) {
+    .desktop-menu {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .navbar-logo {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-container {
         padding: 12px 15px;
