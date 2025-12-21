@@ -67,11 +67,11 @@ const Navbar: React.FC = () => {
                     <div className="logo-container">
                         <Link className="navbar-logo" href="/">
                             <Image
+                                fill
                                 priority
                                 alt="Jinn Perfumery"
-                                height={75}
+                                objectFit="contain"
                                 src="/images/logo.png"
-                                width={100}
                             />
                         </Link>
                     </div>

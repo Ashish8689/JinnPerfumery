@@ -1,4 +1,11 @@
+'use client'
+
 import React from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation, Pagination, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
 import './Testimonials.styles.css'
 import Image from 'next/image'
 import t1 from '@/assets/image/testimonials/t1.png'
@@ -44,24 +51,55 @@ const Testimonials: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="testimonials-grid">
-                    {testimonials.map((testimonial) => (
-                        <div
-                            className="testimonial-card text-card"
-                            key={testimonial.id}
-                        >
-                            <div className="quote-icon">&ldquo;</div>
-                            <p className="testimonial-content">
-                                {testimonial.content}
-                            </p>
-                            <div className="testimonial-author">
-                                <span>
-                                    – {testimonial.customerName},{' '}
-                                    {testimonial.location}
-                                </span>
-                            </div>
-                        </div>
-                    ))}
+                <div className="testimonials-carousel">
+                    <Swiper
+                        loop
+                        navigation
+                        autoplay={{
+                            delay: 3500,
+                            disableOnInteraction: false,
+                        }}
+                        breakpoints={{
+                            320: {
+                                slidesPerView: 1,
+                                spaceBetween: 20,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                                spaceBetween: 20,
+                            },
+                            768: {
+                                slidesPerView: 3,
+                                spaceBetween: 25,
+                            },
+                            1024: {
+                                slidesPerView: 4,
+                                spaceBetween: 30,
+                            },
+                        }}
+                        className="testimonials-swiper"
+                        modules={[Navigation, Pagination, Autoplay]}
+                        pagination={{ clickable: true }}
+                        slidesPerView={4}
+                        spaceBetween={30}
+                    >
+                        {testimonials.map((testimonial) => (
+                            <SwiperSlide key={testimonial.id}>
+                                <div className="testimonial-card text-card">
+                                    <div className="quote-icon">&ldquo;</div>
+                                    <p className="testimonial-content">
+                                        {testimonial.content}
+                                    </p>
+                                    <div className="testimonial-author">
+                                        <span>
+                                            – {testimonial.customerName},{' '}
+                                            {testimonial.location}
+                                        </span>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
         </section>

@@ -35,7 +35,7 @@
 .arrivals-swiper .swiper-button-next,
 .arrivals-swiper .swiper-button-prev {
     color: var(--bold-color);
-    background-color: #ffffff;
+    background-color: var(--title-color);
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -52,7 +52,7 @@
 .arrivals-swiper .swiper-button-next:hover,
 .arrivals-swiper .swiper-button-prev:hover {
     background-color: var(--bold-color);
-    color: #ffffff;
+    color: var(--title-color);
 }
 
 .arrivals-swiper .swiper-pagination-bullet {

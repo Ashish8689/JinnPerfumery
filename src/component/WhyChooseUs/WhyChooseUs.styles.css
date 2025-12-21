@@ -47,6 +47,7 @@
     .why-choose-us-container
     .features-grid
     .feature-card:hover {
+    background: var(--main-color);
     transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
@@ -60,7 +61,8 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px;
-    color: var(--bold-color);
+    fill: transparent;
+    stroke: var(--main-color);
     width: 80px;
     height: 80px;
     opacity: 0.8;
@@ -72,8 +74,23 @@
     .features-grid
     .feature-card:hover
     .feature-icon {
+    fill: transparent;
+    stroke: var(--title-color);
     opacity: 1;
     transform: scale(1.1);
+}
+
+.why-choose-us-section
+    .why-choose-us-container
+    .features-grid
+    .feature-card:hover
+    .feature-title,
+.why-choose-us-section
+    .why-choose-us-container
+    .features-grid
+    .feature-card:hover
+    .feature-description {
+    color: var(--title-color);
 }
 
 .why-choose-us-section
@@ -98,6 +115,39 @@
     color: #666;
     max-width: 280px;
     margin: 0 auto;
+}
+
+/*  Active Feature Card */
+
+.why-choose-us-section
+    .why-choose-us-container
+    .features-grid
+    .feature-card.active {
+    background: var(--main-color);
+}
+
+.why-choose-us-section
+    .why-choose-us-container
+    .features-grid
+    .feature-card.active
+    .feature-icon {
+    fill: transparent;
+    stroke: var(--title-color);
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.why-choose-us-section
+    .why-choose-us-container
+    .features-grid
+    .feature-card.active
+    .feature-title,
+.why-choose-us-section
+    .why-choose-us-container
+    .features-grid
+    .feature-card.active
+    .feature-description {
+    color: var(--title-color);
 }
 
 /* Responsive Design */

@@ -1,5 +1,5 @@
 .arrival-card {
-    background-color: #ffffff;
+    background-color: var(--title-color);
     border-radius: 8px;
     overflow: hidden;
     transition:
@@ -23,19 +23,6 @@
 
 .arrival-image-container img {
     object-position: center;
-}
-
-.sale-badge {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background-color: #c82333;
-    color: #ffffff;
-    padding: 5px 15px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 3px;
-    z-index: 1;
 }
 
 .arrival-image {
@@ -100,9 +87,10 @@
     text-transform: uppercase;
     transition: 0.3s ease-in-out;
     cursor: pointer;
+    background: var(--main-color);
+    color: var(--title-color);
 }
 
 .arrival-buy-now-button:hover {
-    background: var(--main-color);
-    color: var(--title-color);
+    background: var(--bold-color);
 }

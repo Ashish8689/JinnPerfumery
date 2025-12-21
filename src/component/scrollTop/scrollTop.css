@@ -9,7 +9,7 @@
     border: none;
     transition: 0.3s;
     background: var(--bold-color);
-    box-shadow: 0 2px 20px rgba(122, 87, 209, 0.8);
+    box-shadow: 0 2px 20px rgba(214, 153, 60, 0.8);
     cursor: pointer;
 }
 

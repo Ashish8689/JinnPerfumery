@@ -34,4 +34,18 @@ export const testimonials: Testimonial[] = [
         customerName: 'Rahul Kapoor',
         location: 'Bangalore',
     },
+    {
+        id: 5,
+        content:
+            "I recently tried Summer Afternoon and it's very light, breezy scent that keeps me feeling fresh all day",
+        customerName: 'Ayesha Khan',
+        location: 'Chennai',
+    },
+    {
+        id: 6,
+        content:
+            "I recently tried Summer Afternoon and it's very light, breezy scent that keeps me feeling fresh all day",
+        customerName: 'Rahul Kapoor',
+        location: 'Bangalore',
+    },
 ]

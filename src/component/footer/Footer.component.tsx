@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <div className="footer">
             <div className="footer-start">
                 <div className="footer-middle-container">
-                    <h1>Get in touch with me</h1>
+                    <h1>Get in touch with us</h1>
                     <div className="footer-social">
                         <div className="social-flex">
                             {SOCIAL_LINK_OPTIONS.map(({ icon, link }) => {

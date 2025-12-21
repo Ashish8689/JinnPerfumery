@@ -50,7 +50,10 @@ const WhyChooseUs: React.FC = () => {
 
                 <div className="features-grid">
                     {features.map((feature) => (
-                        <div className="feature-card" key={feature.id}>
+                        <div
+                            className={`feature-card ${feature.id === 3 ? 'active' : ''}`}
+                            key={feature.id}
+                        >
                             <div className="feature-icon">{feature.icon}</div>
                             <h3 className="feature-title">{feature.title}</h3>
                             <p className="feature-description">

@@ -1,0 +1,113 @@
+.discover-hero {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.discover-hero__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.discover-hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.discover-hero__content {
+    text-align: center;
+    color: white;
+    z-index: 1;
+    padding: 0 20px;
+}
+
+.discover-hero__title {
+    font-size: 3.5rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.discover-hero__subtitle {
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.02em;
+}
+
+.discover-hero__button {
+    background-color: white;
+    color: #2c2c2c;
+    border: none;
+    padding: 16px 48px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.discover-hero__button:hover {
+    background-color: #f5f5f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .discover-hero {
+        height: 500px;
+    }
+
+    .discover-hero__title {
+        font-size: 2.5rem;
+    }
+
+    .discover-hero__subtitle {
+        font-size: 1rem;
+    }
+
+    .discover-hero__button {
+        padding: 14px 40px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .discover-hero {
+        height: 400px;
+    }
+
+    .discover-hero__title {
+        font-size: 1.8rem;
+    }
+
+    .discover-hero__subtitle {
+        font-size: 0.9rem;
+    }
+
+    .discover-hero__button {
+        padding: 12px 32px;
+    }
+}

@@ -25,7 +25,7 @@ export const PRODUCT_LIST: Product[] = [
         originalPrice: 8950,
         salePrice: 4990,
         isLatest: true,
-        isBestSeller: false,
+        isBestSeller: true,
         category: Category.Men,
     },
     {
@@ -38,7 +38,7 @@ export const PRODUCT_LIST: Product[] = [
         originalPrice: 3500,
         salePrice: 2550,
         isLatest: true,
-        isBestSeller: false,
+        isBestSeller: true,
         category: Category.Men,
     },
     {
@@ -157,5 +157,18 @@ export const PRODUCT_LIST: Product[] = [
         isLatest: true,
         isBestSeller: true,
         category: Category.Women,
+    },
+    {
+        id: 12,
+        name: 'Debo VANILLA',
+        image: '/images/products/p6.webp',
+        description: 'Rich, Warm, Sophisticated',
+        notes: 'An Opulent interplay of sweet & spicy notes',
+        volume: [50],
+        originalPrice: 8950,
+        salePrice: 4990,
+        isLatest: true,
+        isBestSeller: true,
+        category: Category.Men,
     },
 ]

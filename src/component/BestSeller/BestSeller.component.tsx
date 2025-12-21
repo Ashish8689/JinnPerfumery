@@ -18,11 +18,11 @@ const BestSeller: React.FC = () => {
     const productData = useMemo(() => {
         return PRODUCT_LIST.reduce(
             (acc, cv): Record<TableTypeEnum, Product[]> => {
-                if (cv.category === Category.Men) {
+                if (cv.category === Category.Men && cv.isBestSeller) {
                     acc[TableTypeEnum.him].push(cv)
-                } else if (cv.category === Category.Women) {
+                } else if (cv.category === Category.Women && cv.isBestSeller) {
                     acc[TableTypeEnum.her].push(cv)
-                } else {
+                } else if (cv.category === Category.Unisex && cv.isBestSeller) {
                     acc[TableTypeEnum.unisex].push(cv)
                 }
 
