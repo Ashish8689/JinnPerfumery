@@ -1,4 +1,5 @@
 .arrival-card {
+    width: 100%;
     background-color: var(--title-color);
     border-radius: 8px;
     overflow: hidden;

@@ -20,14 +20,14 @@ const ShopByCategory: React.FC = () => {
             title: 'FOR HIM',
             subtitle: 'Discover masculine fragrances',
             image: '/images/category/him.webp',
-            link: '/category/for-him',
+            link: '/male',
         },
         {
             id: '2',
             title: 'FOR HER',
             subtitle: 'Explore feminine fragrances',
             image: '/images/category/her.webp',
-            link: '/category/for-her',
+            link: '/female',
         },
     ]
 
