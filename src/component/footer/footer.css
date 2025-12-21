@@ -44,7 +44,7 @@
 }
 
 .footer-social a:hover {
-    background: var(--b-color);
+    background: var(--bold-color);
 }
 
 .footer-social .i {

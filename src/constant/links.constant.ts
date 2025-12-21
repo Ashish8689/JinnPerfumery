@@ -5,8 +5,8 @@ import Youtube from '../assets/svg/youtube.svg'
 
 export enum SOCIAL_LINKS {
     YOUTUBE = 'https://github.com/Ashish8689',
-    INSTAGRAM = 'https://www.instagram.com/ashishgupta9394/',
-    WHATSAPP = 'https://wa.me/+918689868867',
+    INSTAGRAM = 'https://www.instagram.com/jinn_perfumery/?igsh=MWx4dDV2dzVscHFpNQ%3D%3D#',
+    WHATSAPP = 'https://wa.me/+918097597809',
     FACEBOOK = 'https://www.facebook.com/profile.php?id=100004838256907',
 }
 

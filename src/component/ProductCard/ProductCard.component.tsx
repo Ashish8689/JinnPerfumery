@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductCard.css'
 import Image from 'next/image'
 import { Product } from '@/constant/productList.constant'
+import { SOCIAL_LINKS } from '@/constant/links.constant'
 
 interface ProductCardProps {
     product: Product
@@ -14,6 +15,13 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
     const formatPrice = (price: number): string => {
         return `Rs. ${price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    }
+
+    const handleBuyNow = (): void => {
+        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${product.volume[0]}ML)\n\nSale Price: ${formatPrice(product.salePrice)}`
+
+        const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
+        window.open(whatsappUrl, '_blank')
     }
 
     return (
@@ -50,7 +58,12 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
                     )}
                 </p>
 
-                <button className="arrival-buy-now-button">Buy now</button>
+                <button
+                    className="arrival-buy-now-button"
+                    onClick={handleBuyNow}
+                >
+                    Buy now
+                </button>
             </div>
         </div>
     )
