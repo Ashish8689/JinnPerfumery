@@ -3,6 +3,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link'
 import './navbar.css'
+import Image from 'next/image'
 
 interface MenuItem {
     label: string
@@ -63,14 +64,17 @@ const Navbar: React.FC = () => {
                         <span className="menu-label">Menu</span>
                     </button>
 
-                    <Link className="navbar-logo" href="/">
-                        <span className="logo-icon">JN</span>
-                        <span className="logo-text">
-                            JINN
-                            <br />
-                            PERFUMES
-                        </span>
-                    </Link>
+                    <div className="logo-container">
+                        <Link className="navbar-logo" href="/">
+                            <Image
+                                priority
+                                alt="Jinn Perfumery"
+                                height={75}
+                                src="/images/logo.png"
+                                width={100}
+                            />
+                        </Link>
+                    </div>
 
                     <ul className="desktop-menu">
                         {menuItems.map((item) => (
