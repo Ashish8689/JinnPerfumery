@@ -1,58 +1,57 @@
 import React from 'react'
 import './ProductCard.css'
 import Image from 'next/image'
-
-export interface Product {
-    id: string
-    name: string
-    subtitle: string
-    image: string
-    description: string
-    notes: string
-    volume: string
-    price: string
-}
+import { Product } from '@/constant/productList.constant'
 
 interface ProductCardProps {
     product: Product
 }
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
+    const calculateSavings = (original: number, sale: number): number => {
+        return original - sale
+    }
+
+    const formatPrice = (price: number): string => {
+        return `Rs. ${price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
+    }
+
     return (
-        <div className="product-card">
-            <div className="product-image-container">
+        <div className="arrival-card">
+            <div className="arrival-image-container">
                 <Image
                     fill
                     alt={product.name}
-                    className="product-image"
+                    className="arrival-image"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, (max-width: 1280px) 25vw, 20vw"
                     src={product.image}
                 />
             </div>
-            <div className="product-details">
-                <h3 className="product-name">{product.name}</h3>
-                <p className="product-subtitle">{product.subtitle}</p>
-                <p className="product-description">{product.description}</p>
-                <p className="product-notes">{product.notes}</p>
-                <p className="product-volume">{product.volume}</p>
-                <p className="product-price">{product.price}</p>
+            <div className="arrival-details">
+                <h3 className="arrival-name">
+                    {product.name} ( {product.volume[0]}
+                    ML )
+                </h3>
+                <div className="arrival-pricing">
+                    <span className="sale-price">
+                        {formatPrice(product.salePrice)}
+                    </span>
+                    <span className="original-price">
+                        {formatPrice(product.originalPrice)}
+                    </span>
+                </div>
+                <p className="savings">
+                    Save{' '}
+                    {formatPrice(
+                        calculateSavings(
+                            product.originalPrice,
+                            product.salePrice,
+                        ),
+                    )}
+                </p>
+
+                <button className="arrival-buy-now-button">Buy now</button>
             </div>
-            {/* <button className="product-check-button">
-                CHECK
-                <span className="button-arrow">→</span>
-                <span className="button-icon">
-                    <svg
-                        fill="none"
-                        height="20"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        viewBox="0 0 24 24"
-                        width="20"
-                    >
-                        <path d="M3 3h18v18" />
-                        <path d="M3 21L21 3" />
-                    </svg>
-                </span>
-            </button> */}
         </div>
     )
 }
