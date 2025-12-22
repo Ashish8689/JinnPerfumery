@@ -21,7 +21,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${product.volume[0]}ML)\n\nSale Price: ${formatPrice(product.salePrice)}`
 
         const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
-        window.open(whatsappUrl, '_blank')
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     }
 
     return (
