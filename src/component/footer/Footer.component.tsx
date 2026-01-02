@@ -35,14 +35,6 @@ const Footer: React.FC = () => {
             <div className="footer-end">
                 <p>
                     Copyright {new Date().getFullYear()} © All Rights Reserved.
-                    Made by
-                    <a
-                        href="https://www.instagram.com/ashishgupta9394"
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        Ashish Gupta
-                    </a>
                 </p>
             </div>
         </div>
