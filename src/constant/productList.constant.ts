@@ -1,14 +1,28 @@
 import { Category } from './common.constant'
 
+export enum ProductVolumeSize {
+    EightML = '8ml',
+    FiftyML = '50ml',
+}
+
+export interface ProductPrice {
+    originalPrice: number
+    salePrice: number
+}
 export interface Product {
     id: number
     name: string
     description: string
     notes: string
-    image: string
-    volume: number[] // volume will be in ml
-    originalPrice: number
-    salePrice: number
+    image: {
+        [ProductVolumeSize.EightML]: string
+        [ProductVolumeSize.FiftyML]: string
+    }
+    volume: ProductVolumeSize[]
+    price: {
+        [ProductVolumeSize.EightML]: ProductPrice
+        [ProductVolumeSize.FiftyML]: ProductPrice
+    }
     category: Category
     isLatest?: boolean
     isBestSeller?: boolean
@@ -20,10 +34,23 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Ombre leather',
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
-        volume: [50],
-        image: '/images/products/ombre-leather.png',
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/ombre-leather.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/ombre-leather.png',
+        },
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -33,10 +60,21 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Boss',
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
-        volume: [50],
-        image: '/images/products/boss.png',
-        originalPrice: 3500,
-        salePrice: 2550,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/boss.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/boss.png',
+        },
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 3500,
+                salePrice: 2550,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 3500,
+                salePrice: 2550,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -46,10 +84,21 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Althair',
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
-        volume: [50],
-        image: '/images/products/althair.png',
-        originalPrice: 3550,
-        salePrice: 2550,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/althair.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/althair.png',
+        },
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 3550,
+                salePrice: 2550,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 3550,
+                salePrice: 2550,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -59,10 +108,21 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Kham-Rah',
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
-        volume: [50],
-        image: '/images/products/kham-rah.png',
-        originalPrice: 3500,
-        salePrice: 2350,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/kham-rah.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/kham-rah.png',
+        },
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 3500,
+                salePrice: 2350,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 3500,
+                salePrice: 2350,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Unisex,
@@ -72,10 +132,21 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Cool Wave',
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
-        volume: [50],
-        image: '/images/products/cool-wave.png',
-        originalPrice: 3650,
-        salePrice: 3250,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/cool-wave.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/cool-wave.png',
+        },
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 3650,
+                salePrice: 3250,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 3650,
+                salePrice: 3250,
+            },
+        },
         isLatest: true,
         isBestSeller: false,
         category: Category.Men,
@@ -83,12 +154,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 6,
         name: 'Eroz',
-        image: '/images/products/eroz.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/eroz.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/eroz.png',
+        },
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -96,12 +178,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 7,
         name: 'Floraa',
-        image: '/images/products/floraa.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/floraa.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/floraa.png',
+        },
         description: 'Lactonic, woody, gourmand',
         notes: 'Arguably the longest lasting cardamom perfume',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Women,
@@ -109,12 +202,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 8,
         name: 'Tam-Dao',
-        image: '/images/products/tam-dao.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/tam-dao.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/tam-dao.png',
+        },
         description: 'Spicy, Woody, Sweet',
         notes: 'A sexy tobacco fragrance for men',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Unisex,
@@ -122,12 +226,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 9,
         name: 'Canel 5',
-        image: '/images/products/canel5.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/canel5.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/canel5.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Women,
@@ -135,12 +250,24 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 10,
         name: 'Burry Femme',
-        image: '/images/products/burry-femme.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/burry-femme.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/burry-femme.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Women,
@@ -148,12 +275,25 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 11,
         name: 'Badee-al-oud',
-        image: '/images/products/badee-al-oud.png',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/badee-al-oud.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/badee-al-oud.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Unisex,
@@ -161,12 +301,25 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 12,
         name: 'Allura sport',
-        image: '/images/products/allura-sport.png',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/allura-sport.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/allura-sport.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -174,12 +327,25 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 13,
         name: 'Blue by Jinn',
-        image: '/images/products/blue-by-jinn.png',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/blue-by-jinn.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/blue-by-jinn.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -187,12 +353,24 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 14,
         name: 'Marshmallow',
-        image: '/images/products/marshmallow.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/marshmallow.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/marshmallow.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Women,
@@ -200,12 +378,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 15,
         name: 'Nine PM',
-        image: '/images/products/nine-pm.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/nine-pm.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/nine-pm.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -213,12 +402,25 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 16,
         name: 'Ombre Nomade',
-        image: '/images/products/ombre-nomade.png',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/ombre-nomade.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/ombre-nomade.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -226,12 +428,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 17,
         name: '212 Black',
-        image: '/images/products/212-black.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/212-black.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/212-black.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -239,12 +452,24 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 18,
         name: 'Imagination',
-        image: '/images/products/imagination.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/imagination.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/imagination.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -252,12 +477,25 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 19,
         name: 'Prada Paradox',
-        image: '/images/products/prada-paradox.png',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/prada-paradox.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/prada-paradox.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Women,
@@ -265,12 +503,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 20,
         name: 'Rebel 9',
-        image: '/images/products/rebel9.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/rebel9.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/rebel9.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Unisex,
@@ -278,12 +527,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 21,
         name: 'Sheek OUD',
-        image: '/images/products/sheek-oud.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/sheek-oud.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/sheek-oud.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
@@ -291,12 +551,23 @@ export const PRODUCT_LIST: Product[] = [
     {
         id: 22,
         name: 'OUD Malaki',
-        image: '/images/products/oud-malaki.png',
+        image: {
+            [ProductVolumeSize.EightML]: '/images/products/8ml/oud-malaki.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/oud-malaki.png',
+        },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
-        volume: [50],
-        originalPrice: 8950,
-        salePrice: 4990,
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
         isLatest: true,
         isBestSeller: true,
         category: Category.Men,
