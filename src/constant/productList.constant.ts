@@ -37,9 +37,9 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         image: {
             [ProductVolumeSize.EightML]:
-                '/images/products/8ml/ombre-leather.png',
+                '/images/products/8ml/ombre-leather-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/ombre-leather.png',
+                '/images/products/50ml/ombre-leather-50ml.png',
         },
         price: {
             [ProductVolumeSize.EightML]: {
@@ -57,13 +57,15 @@ export const PRODUCT_LIST: Product[] = [
     },
     {
         id: 2,
-        name: 'Boss',
+        name: 'Spice Bomb',
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/boss.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/boss.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/spice-bomb-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/spice-bomb-50ml.png',
         },
         price: {
             [ProductVolumeSize.EightML]: {
@@ -86,8 +88,9 @@ export const PRODUCT_LIST: Product[] = [
         notes: "A potent freshie that's violent like a Tsunami",
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/althair.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/althair.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/althair-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/althair-50ml.png',
         },
         price: {
             [ProductVolumeSize.EightML]: {
@@ -110,8 +113,10 @@ export const PRODUCT_LIST: Product[] = [
         notes: "A potent freshie that's violent like a Tsunami",
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/kham-rah.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/kham-rah.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/kham-rah-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/kham-rah-50ml.png',
         },
         price: {
             [ProductVolumeSize.EightML]: {
@@ -134,8 +139,10 @@ export const PRODUCT_LIST: Product[] = [
         notes: "A potent freshie that's violent like a Tsunami",
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/cool-wave.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/cool-wave.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/cool-wave-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/cool-wave-50ml.png',
         },
         price: {
             [ProductVolumeSize.EightML]: {
@@ -155,8 +162,8 @@ export const PRODUCT_LIST: Product[] = [
         id: 6,
         name: 'Eroz',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/eroz.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/eroz.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/eroz-8ml.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/eroz-50ml.png',
         },
         description: 'Marine, Beastly, Clean, Woody',
         notes: "A potent freshie that's violent like a Tsunami",
@@ -179,8 +186,9 @@ export const PRODUCT_LIST: Product[] = [
         id: 7,
         name: 'Floraa',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/floraa.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/floraa.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/floraa-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/floraa-50ml.png',
         },
         description: 'Lactonic, woody, gourmand',
         notes: 'Arguably the longest lasting cardamom perfume',
@@ -201,10 +209,11 @@ export const PRODUCT_LIST: Product[] = [
     },
     {
         id: 8,
-        name: 'Tam-Dao',
+        name: 'Tam Dao',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/tam-dao.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/tam-dao.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/tam-dao-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/tam-dao-50ml.png',
         },
         description: 'Spicy, Woody, Sweet',
         notes: 'A sexy tobacco fragrance for men',
@@ -227,8 +236,9 @@ export const PRODUCT_LIST: Product[] = [
         id: 9,
         name: 'Canel 5',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/canel5.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/canel5.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/canel5-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/canel5-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -249,11 +259,12 @@ export const PRODUCT_LIST: Product[] = [
     },
     {
         id: 10,
-        name: 'Burry Femme',
+        name: 'Berry Femme',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/burry-femme.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/berry-femme-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/burry-femme.png',
+                '/images/products/50ml/berry-femme-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -277,9 +288,9 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Badee-al-oud',
         image: {
             [ProductVolumeSize.EightML]:
-                '/images/products/8ml/badee-al-oud.png',
+                '/images/products/8ml/badee-al-oud-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/badee-al-oud.png',
+                '/images/products/50ml/badee-al-oud-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -300,12 +311,11 @@ export const PRODUCT_LIST: Product[] = [
     },
     {
         id: 12,
-        name: 'Allura sport',
+        name: 'Purple',
         image: {
-            [ProductVolumeSize.EightML]:
-                '/images/products/8ml/allura-sport.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/purple-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/allura-sport.png',
+                '/images/products/50ml/purple-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -329,9 +339,9 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Blue by Jinn',
         image: {
             [ProductVolumeSize.EightML]:
-                '/images/products/8ml/blue-by-jinn.png',
+                '/images/products/8ml/blue-by-jinn-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/blue-by-jinn.png',
+                '/images/products/50ml/blue-by-jinn-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -354,9 +364,10 @@ export const PRODUCT_LIST: Product[] = [
         id: 14,
         name: 'Marshmallow',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/marshmallow.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/marshmallow-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/marshmallow.png',
+                '/images/products/50ml/marshmallow-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -379,8 +390,9 @@ export const PRODUCT_LIST: Product[] = [
         id: 15,
         name: 'Nine PM',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/nine-pm.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/nine-pm.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/nine-pm-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/nine-pm-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -404,9 +416,9 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Ombre Nomade',
         image: {
             [ProductVolumeSize.EightML]:
-                '/images/products/8ml/ombre-nomade.png',
+                '/images/products/8ml/ombre-nomade-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/ombre-nomade.png',
+                '/images/products/50ml/ombre-nomade-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -427,10 +439,12 @@ export const PRODUCT_LIST: Product[] = [
     },
     {
         id: 17,
-        name: '212 Black',
+        name: 'Bin Shaikh (Premium)',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/212-black.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/212-black.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/bin-shaikh-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/bin-shaikh-50ml.jpg',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -453,9 +467,10 @@ export const PRODUCT_LIST: Product[] = [
         id: 18,
         name: 'Imagination',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/imagination.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/imagination-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/imagination.png',
+                '/images/products/50ml/imagination-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -479,9 +494,9 @@ export const PRODUCT_LIST: Product[] = [
         name: 'Prada Paradox',
         image: {
             [ProductVolumeSize.EightML]:
-                '/images/products/8ml/prada-paradox.png',
+                '/images/products/8ml/prada-paradox-8ml.png',
             [ProductVolumeSize.FiftyML]:
-                '/images/products/50ml/prada-paradox.png',
+                '/images/products/50ml/prada-paradox-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -504,8 +519,9 @@ export const PRODUCT_LIST: Product[] = [
         id: 20,
         name: 'Rebel 9',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/rebel9.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/rebel9.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/rebel9-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/rebel9-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -526,10 +542,10 @@ export const PRODUCT_LIST: Product[] = [
     },
     {
         id: 21,
-        name: 'Sheek OUD',
+        name: 'Marj (Premium)',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/sheek-oud.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/sheek-oud.png',
+            [ProductVolumeSize.EightML]: '/images/products/8ml/marj-8ml.png',
+            [ProductVolumeSize.FiftyML]: '/images/products/50ml/marj-50ml.jpg',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
@@ -552,8 +568,62 @@ export const PRODUCT_LIST: Product[] = [
         id: 22,
         name: 'OUD Malaki',
         image: {
-            [ProductVolumeSize.EightML]: '/images/products/8ml/oud-malaki.png',
-            [ProductVolumeSize.FiftyML]: '/images/products/50ml/oud-malaki.png',
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/oud-malaki-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/oud-malaki-50ml.png',
+        },
+        description: 'Rich, Warm, Sophisticated',
+        notes: 'An Opulent interplay of sweet & spicy notes',
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
+        isLatest: true,
+        isBestSeller: true,
+        category: Category.Men,
+    },
+    {
+        id: 23,
+        name: 'Ultra Code (Premium)',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/ultra-code-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/ultra-code-50ml.jpg',
+        },
+        description: 'Rich, Warm, Sophisticated',
+        notes: 'An Opulent interplay of sweet & spicy notes',
+        volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
+        price: {
+            [ProductVolumeSize.EightML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+            [ProductVolumeSize.FiftyML]: {
+                originalPrice: 8950,
+                salePrice: 4990,
+            },
+        },
+        isLatest: true,
+        isBestSeller: true,
+        category: Category.Men,
+    },
+    {
+        id: 23,
+        name: 'Juicy Apple',
+        image: {
+            [ProductVolumeSize.EightML]:
+                '/images/products/8ml/juicy-apple-8ml.png',
+            [ProductVolumeSize.FiftyML]:
+                '/images/products/50ml/juicy-apple-50ml.png',
         },
         description: 'Rich, Warm, Sophisticated',
         notes: 'An Opulent interplay of sweet & spicy notes',
