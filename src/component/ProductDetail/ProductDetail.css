@@ -1,6 +1,7 @@
 /* ===== Product Detail Page ===== */
 
 .product-detail-page {
+    margin-top: 132px;
     padding: 40px 0 80px;
     background-color: var(--background-color);
     min-height: 70vh;
@@ -223,7 +224,6 @@
     color: var(--bold-color);
 }
 
-
 /* CTA */
 .product-cta {
     margin-bottom: 32px;
@@ -241,7 +241,9 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: background 0.25s ease, transform 0.15s ease;
+    transition:
+        background 0.25s ease,
+        transform 0.15s ease;
     font-family: inherit;
 }
 

@@ -10,7 +10,7 @@ import ProductReviews, {
     Review,
 } from '@/component/ProductReviews/ProductReviews.component'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Navigation, Pagination } from 'swiper/modules'
+import { Autoplay, Pagination } from 'swiper/modules'
 import './ProductDetail.css'
 
 interface ProductDetailProps {
@@ -19,7 +19,11 @@ interface ProductDetailProps {
     reviews?: Review[]
 }
 
-const ProductDetail: React.FC<ProductDetailProps> = ({ product, related, reviews }) => {
+const ProductDetail: React.FC<ProductDetailProps> = ({
+    product,
+    related,
+    reviews,
+}) => {
     const defaultSize = product.volume.includes(ProductVolumeSize.FiftyML)
         ? ProductVolumeSize.FiftyML
         : product.volume[0]
