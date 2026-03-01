@@ -1,7 +1,9 @@
 import BestSeller from '@/component/BestSeller/BestSeller.component'
 import DiscoverHero from '@/component/DiscoverHero/DiscoverHero.component'
+import FragranceBanner from '@/component/FragranceBanner/FragranceBanner.component'
 import HeroCarousel from '@/component/HeroCarousel/HeroCarousel.component'
 import LatestArrivals from '@/component/LatestArrivals/LatestArrivals.component'
+import OurStory from '@/component/OurStory/OurStory.component'
 import ShopByCategory from '@/component/ShopByCategory/ShopByCategory.component'
 import Testimonials from '@/component/Testimonials/Testimonials.component'
 import WhyChooseUs from '@/component/WhyChooseUs/WhyChooseUs.component'
@@ -11,12 +13,14 @@ export default function Home(): React.JSX.Element {
     return (
         <div className="main">
             <HeroCarousel />
-            <LatestArrivals />
+            <BestSeller />
             <DiscoverHero />
             <ShopByCategory />
+            <LatestArrivals />
             <WhyChooseUs />
-            <BestSeller />
+            <FragranceBanner />
             {/* <WhyTrustUs /> */}
+            <OurStory />
             <Testimonials />
         </div>
     )

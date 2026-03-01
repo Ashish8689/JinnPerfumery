@@ -1,7 +1,38 @@
+/* Discount Banner */
+.discount-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #b8960c;
+    z-index: 1001;
+    text-align: center;
+    padding: 8px 16px;
+}
+
+.discount-banner__text {
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .discount-banner {
+        padding: 6px 12px;
+    }
+
+    .discount-banner__text {
+        font-size: 0.75rem;
+    }
+}
+
 /* Navbar Styles */
 .navbar {
     position: fixed;
-    top: 0;
+    top: 32px;
     left: 0;
     right: 0;
     background-color: transparent;
@@ -342,6 +373,10 @@
 }
 
 @media (max-width: 768px) {
+    .navbar {
+        top: 30px;
+    }
+
     .navbar-container {
         padding: 12px 15px;
     }

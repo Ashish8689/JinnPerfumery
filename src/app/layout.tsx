@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Rouge_Script } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/component/navbar/Navbar.component'
 import Footer from '@/component/footer/Footer.component'
@@ -10,6 +10,12 @@ const montserrat = Montserrat({
     variable: '--font-montserrat',
     subsets: ['latin'],
     weight: ['300', '400', '500', '600', '700'],
+})
+
+const rougeScript = Rouge_Script({
+    variable: '--font-alex-brush',
+    subsets: ['latin'],
+    weight: ['400'],
 })
 
 export const metadata: Metadata = {
@@ -24,7 +30,7 @@ export default function RootLayout({
 }>): React.JSX.Element {
     return (
         <html lang="en">
-            <body className={montserrat.variable}>
+            <body className={`${montserrat.variable} ${rougeScript.variable}`}>
                 <Navbar />
                 {children}
                 <Footer />
