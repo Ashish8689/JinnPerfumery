@@ -58,6 +58,7 @@ const eslintConfig = defineConfig([
                     code: 200, // Set to not conflict with Prettier
                     ignoreTrailingComments: true,
                     ignoreTemplateLiterals: true,
+                    ignoreStrings: true,
                 },
             ],
 
