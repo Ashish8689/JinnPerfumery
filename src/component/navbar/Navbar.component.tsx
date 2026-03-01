@@ -1,26 +1,22 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import './navbar.css'
 import Image from 'next/image'
-
-interface MenuItem {
-    label: string
-    href?: string
-    submenu?: MenuItem[]
-}
-
-const menuItems: MenuItem[] = [
-    { label: 'Male', href: '/male' },
-    { label: 'Female', href: '/female' },
-    { label: 'Unisex', href: '/unisex' },
-    { label: 'Our Story', href: '/our-story' },
-    { label: 'Contact Us', href: '/contact' },
-]
+import { NAVBAR_MENU_ITEMS } from '@/constant/navbar.constant'
 
 const Navbar: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isScrolled, setIsScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = (): void => setIsScrolled(window.scrollY > 10)
+
+        window.addEventListener('scroll', handleScroll)
+
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
 
     const toggleMenu = (): void => {
         setIsMenuOpen(!isMenuOpen)
@@ -28,7 +24,7 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className={`navbar${isScrolled ? ' navbar--scrolled' : ''}`}>
                 <div className="navbar-container">
                     <button
                         aria-label="Toggle menu"
@@ -77,7 +73,7 @@ const Navbar: React.FC = () => {
                     </div>
 
                     <ul className="desktop-menu">
-                        {menuItems.map((item) => (
+                        {NAVBAR_MENU_ITEMS.map((item) => (
                             <li key={item.label}>
                                 <Link href={item.href || '#'}>
                                     {item.label}
@@ -116,7 +112,7 @@ const Navbar: React.FC = () => {
                     </button>
                     <div className="menu-panel">
                         <ul className="menu-list">
-                            {menuItems.map((item) => (
+                            {NAVBAR_MENU_ITEMS.map((item) => (
                                 <li className="menu-item" key={item.label}>
                                     <Link
                                         className="menu-link"

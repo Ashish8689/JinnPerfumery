@@ -8,9 +8,9 @@
     justify-content: center;
 }
 
-.footer-middle-container {
+/* .footer-middle-container {
     width: 250px;
-}
+} */
 
 .footer-middle-container h1 {
     font-size: 18px;
@@ -29,7 +29,7 @@
 
 .footer-social .social-flex {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-decoration: none;
 }
 

@@ -11,7 +11,7 @@ export interface HeroSlide {
 export const HERO_SLIDES: HeroSlide[] = [
     {
         id: 1,
-        image: '/images/carousel/slider1.webp',
+        image: '/images/carousel/slider3.webp',
         title: 'SKINN',
         subtitle: 'HOLIDAY SALE',
         description: 'Flat 20% OFF*',

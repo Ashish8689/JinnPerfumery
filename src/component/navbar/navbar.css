@@ -4,9 +4,26 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: transparent;
+    transition:
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
     z-index: 1000;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.navbar--scrolled {
+    background-color: var(--background-color);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar--scrolled .menu-toggle,
+.navbar--scrolled .desktop-menu a {
+    color: var(--bold-color);
+}
+
+.navbar--scrolled .menu-toggle:hover,
+.navbar--scrolled .desktop-menu a:hover {
+    color: var(--main-color);
 }
 
 .navbar-container {
@@ -31,6 +48,11 @@
     cursor: pointer;
     padding: 8px;
     transition: color 0.3s ease;
+}
+
+.navbar:not(.navbar--scrolled):hover {
+    background-color: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .menu-toggle:hover,
