@@ -12,7 +12,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({
     product,
-    size = ProductVolumeSize.EightML,
+    size = ProductVolumeSize.FiftyML,
 }) => {
     const calculateSavings = (original: number, sale: number): number => {
         return original - sale

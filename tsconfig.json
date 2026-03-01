@@ -19,7 +19,6 @@
         "sourceMap": true,
         "composite": false,
         "removeComments": false,
-        "downlevelIteration": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
         "noImplicitReturns": true,
