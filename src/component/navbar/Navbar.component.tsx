@@ -24,9 +24,9 @@ const Navbar: React.FC = () => {
 
     return (
         <>
-            <div className="discount-banner">
+            {/* <div className="discount-banner">
                 <p className="discount-banner__text">Extra Discount On Upi Payments</p>
-            </div>
+            </div> */}
             <nav className={`navbar${isScrolled ? ' navbar--scrolled' : ''}`}>
                 <div className="navbar-container">
                     <button
