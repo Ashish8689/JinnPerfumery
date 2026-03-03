@@ -12,6 +12,7 @@ import ProductReviews, {
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import './ProductDetail.css'
+import { getFormatPrice } from '@/utils/common.utils'
 
 interface ProductDetailProps {
     product: Product
@@ -37,11 +38,8 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
     const savings = originalPrice - salePrice
     const discountPercent = Math.round((savings / originalPrice) * 100)
 
-    const formatPrice = (price: number): string =>
-        `Rs. ${price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-
     const handleBuyNow = (): void => {
-        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${selectedSize.toUpperCase()})\n\nSale Price: ${formatPrice(salePrice)}`
+        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${selectedSize})\n\nSale Price: ${getFormatPrice(salePrice)}`
         const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     }
@@ -124,15 +122,15 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
                         {/* Pricing */}
                         <div className="product-pricing-block">
                             <span className="product-sale-price">
-                                {formatPrice(salePrice)}
+                                {getFormatPrice(salePrice)}
                             </span>
                             {savings > 0 && (
                                 <>
                                     <span className="product-original-price">
-                                        {formatPrice(originalPrice)}
+                                        {getFormatPrice(originalPrice)}
                                     </span>
                                     <span className="product-savings-badge">
-                                        Save {formatPrice(savings)}
+                                        Save {getFormatPrice(savings)}
                                     </span>
                                 </>
                             )}

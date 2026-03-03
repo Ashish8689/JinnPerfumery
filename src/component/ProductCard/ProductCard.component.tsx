@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Product, ProductVolumeSize } from '@/constant/productList.constant'
 import { SOCIAL_LINKS } from '@/constant/links.constant'
+import { getFormatPrice } from '@/utils/common.utils'
 
 interface ProductCardProps {
     product: Product
@@ -18,14 +19,10 @@ const ProductCard: React.FC<ProductCardProps> = ({
         return original - sale
     }
 
-    const formatPrice = (price: number): string => {
-        return `Rs. ${price.toLocaleString('en-IN', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`
-    }
-
     const { originalPrice, salePrice } = product.price[size as '8ml' | '50ml']
 
     const handleBuyNow = (): void => {
-        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${size.toUpperCase()})\n\nSale Price: ${formatPrice(salePrice)}`
+        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${size.toUpperCase()})\n\nSale Price: ${getFormatPrice(salePrice)}`
 
         const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
@@ -51,14 +48,16 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     </h3>
                 </Link>
                 <div className="arrival-pricing">
-                    <span className="sale-price">{formatPrice(salePrice)}</span>
+                    <span className="sale-price">
+                        {getFormatPrice(salePrice)}
+                    </span>
                     <span className="original-price">
-                        {formatPrice(originalPrice)}
+                        {getFormatPrice(originalPrice)}
                     </span>
                 </div>
                 <p className="savings">
                     Save{' '}
-                    {formatPrice(calculateSavings(originalPrice, salePrice))}
+                    {getFormatPrice(calculateSavings(originalPrice, salePrice))}
                 </p>
 
                 <button

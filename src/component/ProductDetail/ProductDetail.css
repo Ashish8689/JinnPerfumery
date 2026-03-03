@@ -1,7 +1,7 @@
 /* ===== Product Detail Page ===== */
 
 .product-detail-page {
-    margin-top: 132px;
+    margin-top: 100px;
     padding: 40px 0 80px;
     background-color: var(--background-color);
     min-height: 70vh;
