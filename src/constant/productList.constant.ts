@@ -43,8 +43,8 @@ export const PRODUCT_LIST: Product[] = [
         },
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 999,
-                salePrice: 699,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -69,12 +69,12 @@ export const PRODUCT_LIST: Product[] = [
         },
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 3500,
-                salePrice: 2550,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
-                originalPrice: 3500,
-                salePrice: 2550,
+                originalPrice: 999,
+                salePrice: 699,
             },
         },
         isLatest: true,
@@ -94,12 +94,12 @@ export const PRODUCT_LIST: Product[] = [
         },
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 3550,
-                salePrice: 2550,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
-                originalPrice: 3550,
-                salePrice: 2550,
+                originalPrice: 999,
+                salePrice: 699,
             },
         },
         isLatest: true,
@@ -120,8 +120,8 @@ export const PRODUCT_LIST: Product[] = [
         },
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 3500,
-                salePrice: 2350,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -146,12 +146,12 @@ export const PRODUCT_LIST: Product[] = [
         },
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 3650,
-                salePrice: 3250,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
-                originalPrice: 3650,
-                salePrice: 3250,
+                originalPrice: 999,
+                salePrice: 699,
             },
         },
         isLatest: true,
@@ -170,8 +170,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -195,8 +195,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -220,8 +220,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -245,8 +245,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -271,8 +271,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -297,8 +297,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -322,8 +322,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -348,8 +348,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -374,8 +374,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -399,8 +399,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -425,8 +425,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -451,8 +451,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 1499,
@@ -477,8 +477,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -503,8 +503,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -528,8 +528,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -552,8 +552,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 1499,
@@ -578,8 +578,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
@@ -604,8 +604,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 1499,
@@ -630,8 +630,8 @@ export const PRODUCT_LIST: Product[] = [
         volume: [ProductVolumeSize.EightML, ProductVolumeSize.FiftyML],
         price: {
             [ProductVolumeSize.EightML]: {
-                originalPrice: 8950,
-                salePrice: 4990,
+                originalPrice: 149,
+                salePrice: 99,
             },
             [ProductVolumeSize.FiftyML]: {
                 originalPrice: 999,
