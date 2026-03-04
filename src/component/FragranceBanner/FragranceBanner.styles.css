@@ -1,6 +1,6 @@
 .fragrance-banner {
     width: 100%;
-    padding: 60px 24px;
+    padding: 60px 20px;
     background-color: var(--background-color, #f9f5ef);
 }
 
@@ -55,7 +55,6 @@
     font-size: 3.5rem;
     font-weight: 300;
     letter-spacing: 0.1em;
-    margin-bottom: 2rem;
     line-height: 1.2;
     color: var(--white-color);
     text-transform: uppercase;
@@ -94,7 +93,7 @@
 /* Responsive */
 @media (max-width: 768px) {
     .fragrance-banner {
-        padding: 24px 16px;
+        padding: 24px 20px;
     }
 
     .fragrance-banner__inner {
@@ -122,7 +121,8 @@
     }
 
     .fragrance-banner__script {
-        font-size: 2.6rem;
+        right: -48%;
+        font-size: 8rem;
     }
 }
 
@@ -137,7 +137,29 @@
     }
 
     .fragrance-banner__script {
-        font-size: 2rem;
+        bottom: -24%;
+        right: -45%;
+        font-size: 6rem;
+    }
+
+    .fragrance-banner__cta {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .fragrance-banner__content {
+        padding: 20px;
+    }
+
+    .fragrance-banner__title {
+        font-size: 1.45rem;
+    }
+
+    .fragrance-banner__script {
+        bottom: -30%;
+        right: -52%;
+        font-size: 6rem;
     }
 
     .fragrance-banner__cta {

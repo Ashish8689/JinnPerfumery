@@ -79,7 +79,7 @@ a:hover {
 .container {
     margin: 0 auto;
     max-width: 1140px;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 @media (max-width: 992px) {

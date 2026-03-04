@@ -1,6 +1,6 @@
 /* BestSeller Section */
 .bestseller-section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     position: relative;
 }
 
@@ -109,6 +109,6 @@
     }
 
     .products-swiper-container {
-        padding: 0 30px;
+        padding: 0;
     }
 }
