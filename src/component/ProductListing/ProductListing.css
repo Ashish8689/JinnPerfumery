@@ -61,6 +61,10 @@
 }
 
 @media (max-width: 768px) {
+    .product-listing-page {
+        margin-top: 84px;
+    }
+
     .banner-container {
         margin-top: 84px;
         height: 500px;

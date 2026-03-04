@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import ProductCard from '../ProductCard/ProductCard.component'
 import { Product } from '@/constant/productList.constant'
 import './ProductListing.css'
@@ -19,7 +19,7 @@ const ProductListing: React.FC<ProductListingProps> = ({
 }) => {
     return (
         <div className="product-listing-page">
-            <div className="banner-container">
+            {/* <div className="banner-container">
                 <Image
                     fill
                     priority
@@ -29,7 +29,7 @@ const ProductListing: React.FC<ProductListingProps> = ({
                     src={bannerImage}
                 />
                 <div className="banner-overlay" />
-            </div>
+            </div> */}
 
             <section className="products-section">
                 <div className="products-container">
