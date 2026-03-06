@@ -152,6 +152,10 @@
         gap: 40px;
     }
 
+    .contact-form-wrapper {
+        width: 100%;
+    }
+
     .contact-info h1 {
         font-size: 30px;
     }
