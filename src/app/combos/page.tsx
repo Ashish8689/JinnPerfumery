@@ -71,11 +71,25 @@ export default function CombosPage(): React.JSX.Element {
                             (_, i) => {
                                 const product = selected[i]
 
-                                return (
-                                    <div
-                                        className={`summary-slot ${product ? 'filled' : ''}`}
-                                        key={`pick-${i + 1}`}
-                                    >
+                                const scrollToProduct = (): void => {
+                                    const el = document.getElementById(
+                                        `combo-card-${product?.id}`,
+                                    )
+                                    if (el) {
+                                        const top =
+                                            el.getBoundingClientRect().top +
+                                            window.scrollY -
+                                            window.innerHeight / 2 +
+                                            el.offsetHeight / 2
+                                        window.scrollTo({
+                                            top,
+                                            behavior: 'smooth',
+                                        })
+                                    }
+                                }
+
+                                const slotContent = (
+                                    <>
                                         {product ? (
                                             <Image
                                                 alt={product.name}
@@ -103,7 +117,44 @@ export default function CombosPage(): React.JSX.Element {
                                                 </span>
                                             )}
                                         </div>
-                                    </div>
+                                    </>
+                                )
+
+                                const scrollToGrid = (): void => {
+                                    const el = document.getElementById(
+                                        `combo-card-${PRODUCT_LIST[0].id}`,
+                                    )
+                                    if (el) {
+                                        const top =
+                                            el.getBoundingClientRect().top +
+                                            window.scrollY -
+                                            window.innerHeight / 2 +
+                                            el.offsetHeight / 2
+                                        window.scrollTo({
+                                            top,
+                                            behavior: 'smooth',
+                                        })
+                                    }
+                                }
+
+                                return product ? (
+                                    <button
+                                        className="summary-slot filled"
+                                        key={`pick-${i + 1}`}
+                                        type="button"
+                                        onClick={scrollToProduct}
+                                    >
+                                        {slotContent}
+                                    </button>
+                                ) : (
+                                    <button
+                                        className="summary-slot"
+                                        key={`pick-${i + 1}`}
+                                        type="button"
+                                        onClick={scrollToGrid}
+                                    >
+                                        {slotContent}
+                                    </button>
                                 )
                             },
                         )}
@@ -155,6 +206,7 @@ export default function CombosPage(): React.JSX.Element {
                             <button
                                 className={`combo-card ${isSelected ? 'selected' : ''}`}
                                 disabled={isDisabled}
+                                id={`combo-card-${product.id}`}
                                 key={product.id}
                                 style={{ opacity: isDisabled ? 0.45 : 1 }}
                                 type="button"
