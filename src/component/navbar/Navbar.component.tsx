@@ -117,16 +117,6 @@ const Navbar: React.FC = () => {
                         </Link>
                     </div>
 
-                    <ul className="desktop-menu">
-                        {NAVBAR_MENU_ITEMS.map((item) => (
-                            <li key={item.label}>
-                                <Link href={item.href || '#'}>
-                                    {item.label}
-                                </Link>
-                            </li>
-                        ))}
-                    </ul>
-
                     {/* Inline Search Bar */}
                     <div
                         className={`navbar-search${isSearchOpen ? ' navbar-search--active' : ''}`}
@@ -248,6 +238,16 @@ const Navbar: React.FC = () => {
                             </div>
                         )}
                     </div>
+
+                    <ul className="desktop-menu">
+                        {NAVBAR_MENU_ITEMS.map((item) => (
+                            <li key={item.label}>
+                                <Link href={item.href || '#'}>
+                                    {item.label}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
 
                     {/* Mobile search toggle */}
                     <button
