@@ -82,6 +82,20 @@ a:hover {
     padding: 0 20px;
 }
 
+.loading-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-inner-container {
+    width: 180px;
+    height: 180px;
+    color: var(--main-color);
+}
+
 @media (max-width: 992px) {
     .container {
         max-width: 960px;

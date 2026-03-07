@@ -1,11 +1,13 @@
-import CustomImage from '@/component/customImage/CustomImage.component'
+'use client'
+
 import React from 'react'
+import IconLoader from '@/assets/svg/loading.svg'
 
 const Loading: React.FC = () => {
     return (
-        <div className="open-source-loading">
-            <div className="loading">
-                <CustomImage src="/image/loading.gif" />
+        <div className="loading-container">
+            <div className="loading-inner-container">
+                <IconLoader />
             </div>
         </div>
     )
