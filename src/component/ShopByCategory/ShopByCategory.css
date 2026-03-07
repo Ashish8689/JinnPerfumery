@@ -115,7 +115,7 @@
 /* Responsive Design */
 @media (max-width: 768px) {
     .shop-by-category-section {
-        padding: 60px 0;
+        padding: 60px 0 30px;
     }
 
     .category-main-title {

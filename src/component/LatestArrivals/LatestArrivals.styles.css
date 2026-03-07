@@ -71,4 +71,8 @@
     .latest-arrivals-title {
         font-size: 1.5rem;
     }
+
+    .arrivals-carousel {
+        padding-top: 30px;
+    }
 }

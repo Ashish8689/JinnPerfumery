@@ -72,7 +72,7 @@
 
 @media (max-width: 768px) {
     .bestseller-section {
-        padding: 60px 0;
+        padding: 60px 0 10px;
     }
 
     .bestseller-title {

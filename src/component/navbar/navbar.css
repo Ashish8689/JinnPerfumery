@@ -153,7 +153,10 @@
     border: 1.5px solid rgba(0, 0, 0, 0.18);
     border-radius: 24px;
     padding: 8px 16px;
-    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
     width: 280px;
 }
 
@@ -324,7 +327,9 @@
     z-index: 2000;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
 }
 
 .mobile-search-overlay--active {
@@ -592,6 +597,10 @@
 }
 
 @media (max-width: 768px) {
+    .navbar-logo {
+        height: 40px;
+    }
+
     .navbar-container {
         padding: 12px 15px;
     }

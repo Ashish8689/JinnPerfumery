@@ -35,7 +35,7 @@
     padding: 20px 40px;
     border-radius: 50px;
     max-width: 600px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     box-shadow: 0 4px 15px rgba(214, 153, 60, 0.4);
 }
 
@@ -194,7 +194,7 @@
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .testimonials-section {
-        padding: 40px 16px 0;
+        padding: 30px 16px 0;
     }
 
     .testimonials-title {
@@ -204,10 +204,6 @@
     .testimonials-badge {
         flex-direction: column;
         padding: 25px 30px;
-    }
-
-    .badge-avatars {
-        margin-bottom: 10px;
     }
 
     .badge-text {
@@ -235,7 +231,8 @@
 
 @media (max-width: 480px) {
     .testimonials-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        margin-bottom: 30px;
     }
 
     .badge-avatar {

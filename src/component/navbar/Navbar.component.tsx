@@ -103,7 +103,6 @@ const Navbar: React.FC = () => {
                                 <line x1="3" x2="21" y1="18" y2="18" />
                             </svg>
                         )}
-                        <span className="menu-label">Menu</span>
                     </button>
 
                     <div className="logo-container">
