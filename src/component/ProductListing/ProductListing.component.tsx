@@ -13,8 +13,8 @@ interface ProductListingProps {
 }
 
 const ProductListing: React.FC<ProductListingProps> = ({
-    title,
-    bannerImage,
+    // title,
+    // bannerImage,
     products,
 }) => {
     return (
