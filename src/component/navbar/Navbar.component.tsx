@@ -53,7 +53,9 @@ const Navbar: React.FC = () => {
         ? PRODUCT_LIST.filter(
               (p) =>
                   p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                  p.description.toLowerCase().includes(searchQuery.toLowerCase()),
+                  p.description
+                      .toLowerCase()
+                      .includes(searchQuery.toLowerCase()),
           )
         : []
 
@@ -111,7 +113,7 @@ const Navbar: React.FC = () => {
                                 priority
                                 alt="Jinn Perfumery"
                                 objectFit="contain"
-                                src="/images/logo.png"
+                                src="/images/logo-no-bg.png"
                             />
                         </Link>
                     </div>
@@ -131,7 +133,11 @@ const Navbar: React.FC = () => {
                         className={`navbar-search${isSearchOpen ? ' navbar-search--active' : ''}`}
                         tabIndex={-1}
                         onBlur={(e) => {
-                            if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+                            if (
+                                !e.currentTarget.contains(
+                                    e.relatedTarget as Node,
+                                )
+                            ) {
                                 setIsSearchOpen(false)
                                 setSearchQuery('')
                             }
@@ -157,14 +163,20 @@ const Navbar: React.FC = () => {
                                 ref={searchInputRef}
                                 type="text"
                                 value={searchQuery}
-                                onChange={(e) => { setIsSearchOpen(true); setSearchQuery(e.target.value) }}
+                                onChange={(e) => {
+                                    setIsSearchOpen(true)
+                                    setSearchQuery(e.target.value)
+                                }}
                                 onFocus={() => setIsSearchOpen(true)}
                             />
                             <button
                                 aria-label="Clear search"
                                 className={`navbar-search-clear${searchQuery ? '' : ' navbar-search-clear--hidden'}`}
                                 tabIndex={searchQuery ? 0 : -1}
-                                onClick={() => { setSearchQuery(''); searchInputRef.current?.focus() }}
+                                onClick={() => {
+                                    setSearchQuery('')
+                                    searchInputRef.current?.focus()
+                                }}
                             >
                                 &times;
                             </button>
@@ -175,23 +187,44 @@ const Navbar: React.FC = () => {
                                 {filteredProducts.length > 0 ? (
                                     <ul className="search-results">
                                         {filteredProducts.map((product) => (
-                                            <li className="search-result-item" key={product.id}>
+                                            <li
+                                                className="search-result-item"
+                                                key={product.id}
+                                            >
                                                 <button
                                                     className="search-result-btn"
-                                                    onMouseDown={(e) => { e.preventDefault(); handleProductSelect(product.id) }}
+                                                    onMouseDown={(e) => {
+                                                        e.preventDefault()
+                                                        handleProductSelect(
+                                                            product.id,
+                                                        )
+                                                    }}
                                                 >
                                                     <div className="search-result-image">
                                                         <Image
                                                             alt={product.name}
                                                             height={56}
-                                                            src={product.image['50ml']}
-                                                            style={{ objectFit: 'contain' }}
+                                                            src={
+                                                                product.image[
+                                                                    '50ml'
+                                                                ]
+                                                            }
+                                                            style={{
+                                                                objectFit:
+                                                                    'contain',
+                                                            }}
                                                             width={56}
                                                         />
                                                     </div>
                                                     <div className="search-result-info">
-                                                        <span className="search-result-name">{product.name}</span>
-                                                        <span className="search-result-desc">{product.description}</span>
+                                                        <span className="search-result-name">
+                                                            {product.name}
+                                                        </span>
+                                                        <span className="search-result-desc">
+                                                            {
+                                                                product.description
+                                                            }
+                                                        </span>
                                                     </div>
                                                     <svg
                                                         className="search-result-arrow"
@@ -209,7 +242,9 @@ const Navbar: React.FC = () => {
                                         ))}
                                     </ul>
                                 ) : (
-                                    <p className="search-no-results">No products found</p>
+                                    <p className="search-no-results">
+                                        No products found
+                                    </p>
                                 )}
                             </div>
                         )}
@@ -219,7 +254,13 @@ const Navbar: React.FC = () => {
                     <button
                         aria-label="Open search"
                         className="search-toggle"
-                        onClick={() => { setIsSearchOpen(!isSearchOpen); setTimeout(() => searchInputRef.current?.focus(), 50) }}
+                        onClick={() => {
+                            setIsSearchOpen(!isSearchOpen)
+                            setTimeout(
+                                () => searchInputRef.current?.focus(),
+                                50,
+                            )
+                        }}
                     >
                         <svg
                             fill="none"
@@ -234,11 +275,12 @@ const Navbar: React.FC = () => {
                         </svg>
                     </button>
                 </div>
-
             </nav>
 
             {/* Mobile Search Overlay */}
-            <div className={`mobile-search-overlay${isSearchOpen ? ' mobile-search-overlay--active' : ''}`}>
+            <div
+                className={`mobile-search-overlay${isSearchOpen ? ' mobile-search-overlay--active' : ''}`}
+            >
                 <div className="mobile-search-header">
                     <div className="mobile-search-inner">
                         <svg
@@ -264,7 +306,10 @@ const Navbar: React.FC = () => {
                         <button
                             aria-label="Close search"
                             className="mobile-search-close"
-                            onClick={() => { setIsSearchOpen(false); setSearchQuery('') }}
+                            onClick={() => {
+                                setIsSearchOpen(false)
+                                setSearchQuery('')
+                            }}
                         >
                             &times;
                         </button>
@@ -274,23 +319,42 @@ const Navbar: React.FC = () => {
                             {filteredProducts.length > 0 ? (
                                 <ul className="search-results">
                                     {filteredProducts.map((product) => (
-                                        <li className="search-result-item" key={product.id}>
+                                        <li
+                                            className="search-result-item"
+                                            key={product.id}
+                                        >
                                             <button
                                                 className="search-result-btn"
-                                                onMouseDown={(e) => { e.preventDefault(); handleProductSelect(product.id) }}
+                                                onMouseDown={(e) => {
+                                                    e.preventDefault()
+                                                    handleProductSelect(
+                                                        product.id,
+                                                    )
+                                                }}
                                             >
                                                 <div className="search-result-image">
                                                     <Image
                                                         alt={product.name}
                                                         height={56}
-                                                        src={product.image['50ml']}
-                                                        style={{ objectFit: 'contain' }}
+                                                        src={
+                                                            product.image[
+                                                                '50ml'
+                                                            ]
+                                                        }
+                                                        style={{
+                                                            objectFit:
+                                                                'contain',
+                                                        }}
                                                         width={56}
                                                     />
                                                 </div>
                                                 <div className="search-result-info">
-                                                    <span className="search-result-name">{product.name}</span>
-                                                    <span className="search-result-desc">{product.description}</span>
+                                                    <span className="search-result-name">
+                                                        {product.name}
+                                                    </span>
+                                                    <span className="search-result-desc">
+                                                        {product.description}
+                                                    </span>
                                                 </div>
                                                 <svg
                                                     className="search-result-arrow"
@@ -308,7 +372,9 @@ const Navbar: React.FC = () => {
                                     ))}
                                 </ul>
                             ) : (
-                                <p className="search-no-results">No products found</p>
+                                <p className="search-no-results">
+                                    No products found
+                                </p>
                             )}
                         </div>
                     )}
