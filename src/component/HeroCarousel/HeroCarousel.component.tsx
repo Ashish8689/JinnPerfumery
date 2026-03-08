@@ -9,7 +9,7 @@ export default function HeroCarousel(): React.JSX.Element {
                 priority
                 alt="Hero Banner"
                 className="hero-image"
-                src="/images/carousel/slider1.png"
+                src="/images/carousel/slider4.jpeg"
             />
         </section>
     )
