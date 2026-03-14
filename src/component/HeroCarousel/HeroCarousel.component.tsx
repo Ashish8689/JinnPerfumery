@@ -8,8 +8,15 @@ export default function HeroCarousel(): React.JSX.Element {
                 fill
                 priority
                 alt="Hero Banner"
-                className="hero-image"
-                src="/images/carousel/slider4.jpeg"
+                className="hero-image hero-image-desktop"
+                src="/images/carousel/slider4.png"
+            />
+            <Image
+                fill
+                priority
+                alt="Hero Banner"
+                className="hero-image hero-image-mobile"
+                src="/images/carousel/slider4-mobile.png"
             />
         </section>
     )

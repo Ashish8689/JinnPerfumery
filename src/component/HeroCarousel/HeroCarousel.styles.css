@@ -1,4 +1,5 @@
 .hero-carousel-section {
+    margin-top: 80px;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -24,6 +25,20 @@
 
 .hero-image {
     object-fit: contain !important;
+}
+
+.hero-image-mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .hero-image-desktop {
+        display: none;
+    }
+
+    .hero-image-mobile {
+        display: block;
+    }
 }
 
 .hero-overlay {
