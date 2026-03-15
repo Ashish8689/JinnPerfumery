@@ -36,7 +36,7 @@ export default function OurStory(): React.JSX.Element {
                     fill
                     alt="The Gift of Indian Royalty — Neesh Est. India 1904"
                     className="our-story__image"
-                    src="/images/banner/our-story-banner.webp"
+                    src="/images/banner/our-story-banner.png"
                 />
             </div>
         </section>

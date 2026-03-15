@@ -13,7 +13,7 @@ export default function ContactPage(): React.JSX.Element {
     })
 
     const handleChange = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     ): void => {
         setForm({ ...form, [e.target.name]: e.target.value })
     }
@@ -75,7 +75,7 @@ export default function ContactPage(): React.JSX.Element {
                                         strokeLinejoin="round"
                                     />
                                 </svg>
-                                info@jinnperfumery.com
+                                support@jinnperfumery.com
                             </a>
                         </div>
 
