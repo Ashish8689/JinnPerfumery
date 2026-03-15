@@ -90,6 +90,21 @@
     opacity: 0.85;
 }
 
+/* Image visibility by breakpoint */
+.fragrance-banner__image--mobile {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .fragrance-banner__image--desktop {
+        display: none;
+    }
+
+    .fragrance-banner__image--mobile {
+        display: block;
+    }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .fragrance-banner {

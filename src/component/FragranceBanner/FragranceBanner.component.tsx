@@ -36,8 +36,15 @@ export default function FragranceBanner(): React.JSX.Element {
                     <Image
                         fill
                         alt="Luxury perfume collection"
-                        className="fragrance-banner__image"
-                        src="/images/banner/men.webp"
+                        className="fragrance-banner__image fragrance-banner__image--desktop"
+                        src="/images/banner/life-banner.png"
+                        style={{ objectFit: 'cover', objectPosition: 'center' }}
+                    />
+                    <Image
+                        fill
+                        alt="Luxury perfume collection"
+                        className="fragrance-banner__image fragrance-banner__image--mobile"
+                        src="/images/banner/life-banner-mobile.jpeg"
                         style={{ objectFit: 'cover', objectPosition: 'center' }}
                     />
                 </div>

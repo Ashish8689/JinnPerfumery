@@ -17,14 +17,14 @@ const ShopByCategory: React.FC = () => {
             id: '1',
             title: 'FOR HIM',
             subtitle: 'Discover masculine fragrances',
-            image: '/images/category/him.jpeg',
+            image: '/images/category/him.jpg',
             link: '/male',
         },
         {
             id: '2',
             title: 'FOR HER',
             subtitle: 'Explore feminine fragrances',
-            image: '/images/category/her.jpeg',
+            image: '/images/category/her.jpg',
             link: '/female',
         },
     ]
