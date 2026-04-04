@@ -25,9 +25,9 @@ export default function DiscoverHero(): React.JSX.Element {
                         <br />
                         100% cruelty free
                     </p>
-                    <button className="discover-hero__button">
+                    {/* <button className="discover-hero__button">
                         FRAGRANCES
-                    </button>
+                    </button> */}
                 </div>
             </div>
         </section>

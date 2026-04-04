@@ -32,12 +32,15 @@ export default function OurStory(): React.JSX.Element {
                 </p>
             </div>
             <div className="our-story__image-wrapper">
-                <Image
-                    fill
-                    alt="The Gift of Indian Royalty — Neesh Est. India 1904"
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
                     className="our-story__image"
-                    src="/images/banner/our-story-banner.png"
-                />
+                >
+                    <source src="/videos/our-story.mp4" type="video/mp4" />
+                </video>
             </div>
         </section>
     )
