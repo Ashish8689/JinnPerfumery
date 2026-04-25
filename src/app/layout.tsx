@@ -19,7 +19,11 @@ const rougeScript = Rouge_Script({
 })
 
 export const metadata: Metadata = {
-    title: 'JINN Perfumery | Luxury Fragrances at Affordable Prices',
+    metadataBase: new URL('https://jinnperfumery.com'),
+    title: {
+        default: 'JINN Perfumery | Luxury Fragrances at Affordable Prices',
+        template: '%s | JINN Perfumery',
+    },
     description:
         'JINN Perfumery offers premium, long-lasting inspired fragrances crafted with vegan, skin-safe oils from Switzerland, Spain, France, and the UAE. Smell rich without the luxury price tag.',
     keywords: [
@@ -38,6 +42,10 @@ export const metadata: Metadata = {
             'Premium, long-lasting inspired fragrances crafted with vegan, skin-safe oils. Smell confident, refined, and unforgettable.',
         siteName: 'JINN Perfumery',
         type: 'website',
+        url: 'https://jinnperfumery.com',
+    },
+    alternates: {
+        canonical: 'https://jinnperfumery.com',
     },
 }
 
