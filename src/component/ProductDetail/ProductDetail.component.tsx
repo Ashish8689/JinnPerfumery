@@ -6,9 +6,7 @@ import Link from 'next/link'
 import { Product, ProductVolumeSize } from '@/constant/productList.constant'
 import { SOCIAL_LINKS } from '@/constant/links.constant'
 import ProductCard from '@/component/ProductCard/ProductCard.component'
-import ProductReviews, {
-    Review,
-} from '@/component/ProductReviews/ProductReviews.component'
+import { Review } from '@/component/ProductReviews/ProductReviews.component'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
 import './ProductDetail.css'
@@ -23,7 +21,7 @@ interface ProductDetailProps {
 const ProductDetail: React.FC<ProductDetailProps> = ({
     product,
     related,
-    reviews,
+    // reviews,
 }) => {
     const defaultSize = product.volume.includes(ProductVolumeSize.FiftyML)
         ? ProductVolumeSize.FiftyML
@@ -329,7 +327,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
                     </div>
                 )}
 
-                <ProductReviews reviews={reviews ?? []} />
+                {/* <ProductReviews reviews={reviews ?? []} /> */}
             </div>
         </div>
     )

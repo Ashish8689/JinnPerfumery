@@ -19,7 +19,7 @@ interface ProductReviewsProps {
 }
 
 const StarRating: React.FC<{ rating: number }> = ({ rating }) => (
-    <div className="pr-stars" aria-label={`${rating} out of 5 stars`}>
+    <div aria-label={`${rating} out of 5 stars`} className="pr-stars">
         {Array.from({ length: 5 }, (_, i) => (
             <span
                 className={i < rating ? 'pr-star filled' : 'pr-star empty'}
@@ -46,7 +46,9 @@ const ProductReviews: React.FC<ProductReviewsProps> = ({
 }) => {
     const [visibleCount, setVisibleCount] = useState(pageSize)
 
-    if (!reviews || reviews.length === 0) return null
+    if (!reviews || reviews.length === 0) {
+        return null
+    }
 
     const visibleReviews = reviews.slice(0, visibleCount)
     const hasMore = visibleCount < reviews.length

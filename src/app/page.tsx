@@ -5,7 +5,7 @@ import HeroCarousel from '@/component/HeroCarousel/HeroCarousel.component'
 import LatestArrivals from '@/component/LatestArrivals/LatestArrivals.component'
 import OurStory from '@/component/OurStory/OurStory.component'
 import ShopByCategory from '@/component/ShopByCategory/ShopByCategory.component'
-import Testimonials from '@/component/Testimonials/Testimonials.component'
+// import Testimonials from '@/component/Testimonials/Testimonials.component'
 import WhyChooseUs from '@/component/WhyChooseUs/WhyChooseUs.component'
 // import WhyTrustUs from '@/component/WhyTrustUs/WhyTrustUs.component'
 
@@ -21,7 +21,7 @@ export default function Home(): React.JSX.Element {
             <FragranceBanner />
             {/* <WhyTrustUs /> */}
             <OurStory />
-            <Testimonials />
+            {/* <Testimonials /> */}
         </div>
     )
 }
