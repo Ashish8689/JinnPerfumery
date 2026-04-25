@@ -40,8 +40,7 @@ export default function CombosPage(): React.JSX.Element {
 
         const message =
             `Hi! I'd like to order a combo of ${MAX_COMBO_SELECTION} perfumes (8ml each):\n\n` +
-            `${productLines}\n\n` +
-            `*Combo Price: ${getFormatPrice(COMBO_PRICE)}*`
+            `${productLines}\n\n`
 
         window.open(
             `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`,

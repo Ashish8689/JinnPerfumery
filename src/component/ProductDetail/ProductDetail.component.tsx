@@ -39,7 +39,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
     const discountPercent = Math.round((savings / originalPrice) * 100)
 
     const handleBuyNow = (): void => {
-        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${selectedSize})\n\nSale Price: ${getFormatPrice(salePrice)}`
+        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${selectedSize})`
         const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     }
@@ -118,6 +118,9 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
                         <p className="product-description">
                             {product.description}
                         </p>
+                        {product.notes && (
+                            <p className="product-tagline">{product.notes}</p>
+                        )}
 
                         {/* Pricing */}
                         <div className="product-pricing-block">
@@ -184,14 +187,80 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
                             </button>
                         </div>
 
-                        {/* Notes */}
-                        {product.notes && (
+                        {/* Fragrance Notes Pyramid */}
+                        {(product.topNotes ||
+                            product.middleNotes ||
+                            product.baseNotes) && (
                             <div className="product-notes-block">
                                 <h3 className="product-notes-title">
-                                    About this fragrance
+                                    Fragrance Notes
                                 </h3>
-                                <p className="product-notes-text">
-                                    {product.notes}
+                                <div className="product-notes-pyramid">
+                                    {product.topNotes && (
+                                        <div className="notes-row">
+                                            <span className="notes-row-label">
+                                                Top
+                                            </span>
+                                            <div className="notes-row-tags">
+                                                {product.topNotes.map((n) => (
+                                                    <span
+                                                        className="note-tag top"
+                                                        key={n}
+                                                    >
+                                                        {n}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                    {product.middleNotes && (
+                                        <div className="notes-row">
+                                            <span className="notes-row-label">
+                                                Heart
+                                            </span>
+                                            <div className="notes-row-tags">
+                                                {product.middleNotes.map(
+                                                    (n) => (
+                                                        <span
+                                                            className="note-tag middle"
+                                                            key={n}
+                                                        >
+                                                            {n}
+                                                        </span>
+                                                    ),
+                                                )}
+                                            </div>
+                                        </div>
+                                    )}
+                                    {product.baseNotes && (
+                                        <div className="notes-row">
+                                            <span className="notes-row-label">
+                                                Base
+                                            </span>
+                                            <div className="notes-row-tags">
+                                                {product.baseNotes.map((n) => (
+                                                    <span
+                                                        className="note-tag base"
+                                                        key={n}
+                                                    >
+                                                        {n}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        )}
+
+                        {/* Story */}
+                        {product.story && (
+                            <div className="product-story-block">
+                                <h3 className="product-notes-title">
+                                    The Story
+                                </h3>
+                                <p className="product-story-text">
+                                    {product.story}
                                 </p>
                             </div>
                         )}

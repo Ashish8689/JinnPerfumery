@@ -175,8 +175,17 @@
 .product-description {
     font-size: 0.9rem;
     color: var(--text-color);
-    margin-bottom: 24px;
+    margin-bottom: 8px;
     letter-spacing: 0.3px;
+}
+
+.product-tagline {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    opacity: 0.75;
 }
 
 /* Pricing */
@@ -271,13 +280,81 @@
     color: var(--bold-color);
     text-transform: uppercase;
     letter-spacing: 0.6px;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
 }
 
 .product-notes-text {
     font-size: 0.9rem;
     color: var(--text-color);
     line-height: 1.6;
+    font-style: italic;
+}
+
+/* Fragrance Notes Pyramid */
+.product-notes-pyramid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.notes-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.notes-row-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-color);
+    width: 36px;
+    flex-shrink: 0;
+}
+
+.notes-row-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.note-tag {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
+}
+
+.note-tag.top {
+    background-color: #e8f4f8;
+    color: #1a6080;
+}
+
+.note-tag.middle {
+    background-color: #f3ede8;
+    color: #7a4a2e;
+}
+
+.note-tag.base {
+    background-color: #ede8f3;
+    color: #4a2e7a;
+}
+
+/* Story */
+.product-story-block {
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--light-color);
+    border-radius: 8px;
+    margin-bottom: 28px;
+}
+
+.product-story-text {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    line-height: 1.75;
     font-style: italic;
 }
 

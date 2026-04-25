@@ -22,7 +22,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     const { originalPrice, salePrice } = product.price[size as '8ml' | '50ml']
 
     const handleBuyNow = (): void => {
-        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${size.toUpperCase()})\n\nSale Price: ${getFormatPrice(salePrice)}`
+        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${size.toUpperCase()})`
 
         const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
