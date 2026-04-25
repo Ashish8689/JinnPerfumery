@@ -1,5 +1,4 @@
 import React from 'react'
-import Image from 'next/image'
 import './OurStory.styles.css'
 
 export default function OurStory(): React.JSX.Element {
