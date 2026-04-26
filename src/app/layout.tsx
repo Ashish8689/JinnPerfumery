@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/component/navbar/Navbar.component'
 import Footer from '@/component/footer/Footer.component'
 import ScrollTop from '@/component/scrollTop/ScrollTop.component'
+import { CartProvider } from '@/context/CartContext'
 import React from 'react'
 
 const montserrat = Montserrat({
@@ -57,10 +58,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${montserrat.variable} ${rougeScript.variable}`}>
-                <Navbar />
-                {children}
-                <Footer />
-                <ScrollTop />
+                <CartProvider>
+                    <Navbar />
+                    {children}
+                    <Footer />
+                    <ScrollTop />
+                </CartProvider>
             </body>
         </html>
     )

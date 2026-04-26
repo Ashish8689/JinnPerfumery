@@ -3,12 +3,14 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Product, ProductVolumeSize } from '@/constant/productList.constant'
 import { SOCIAL_LINKS } from '@/constant/links.constant'
 import ProductCard from '@/component/ProductCard/ProductCard.component'
 import { Review } from '@/component/ProductReviews/ProductReviews.component'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination } from 'swiper/modules'
+import { useCart } from '@/context/CartContext'
 import './ProductDetail.css'
 import { getFormatPrice } from '@/utils/common.utils'
 
@@ -35,6 +37,21 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
 
     const savings = originalPrice - salePrice
     const discountPercent = Math.round((savings / originalPrice) * 100)
+
+    const router = useRouter()
+    const { addItem, items } = useCart()
+
+    const isInCart = items.some(
+        (i) => i.product.id === product.id && i.size === selectedSize,
+    )
+
+    const handleAddToCart = (): void => {
+        if (isInCart) {
+            router.push('/cart')
+        } else {
+            addItem(product, selectedSize)
+        }
+    }
 
     const handleBuyNow = (): void => {
         const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${selectedSize})`
@@ -177,6 +194,12 @@ const ProductDetail: React.FC<ProductDetailProps> = ({
 
                         {/* CTA */}
                         <div className="product-cta">
+                            <button
+                                className={`product-add-to-cart-btn${isInCart ? ' in-cart' : ''}`}
+                                onClick={handleAddToCart}
+                            >
+                                {isInCart ? 'Go to Cart' : 'Add to Cart'}
+                            </button>
                             <button
                                 className="product-buy-now-btn"
                                 onClick={handleBuyNow}

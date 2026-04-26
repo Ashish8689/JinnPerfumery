@@ -1,10 +1,14 @@
+'use client'
+
 import React from 'react'
 import './ProductCard.css'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { Product, ProductVolumeSize } from '@/constant/productList.constant'
 import { SOCIAL_LINKS } from '@/constant/links.constant'
 import { getFormatPrice } from '@/utils/common.utils'
+import { useCart } from '@/context/CartContext'
 
 interface ProductCardProps {
     product: Product
@@ -15,15 +19,31 @@ const ProductCard: React.FC<ProductCardProps> = ({
     product,
     size = ProductVolumeSize.FiftyML,
 }) => {
+    const { addItem, items } = useCart()
+    const router = useRouter()
+
     const calculateSavings = (original: number, sale: number): number => {
         return original - sale
     }
 
     const { originalPrice, salePrice } = product.price[size as '8ml' | '50ml']
 
-    const handleBuyNow = (): void => {
-        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${size.toUpperCase()})`
+    const isInCart = items.some(
+        (i) => i.product.id === product.id && i.size === size,
+    )
 
+    const handleAddToCart = (e: React.MouseEvent): void => {
+        e.preventDefault()
+        if (isInCart) {
+            router.push('/cart')
+        } else {
+            addItem(product, size)
+        }
+    }
+
+    const handleBuyNow = (e: React.MouseEvent): void => {
+        e.preventDefault()
+        const message = `Hi, I'm interested in purchasing:\n\n*${product.name}* (${size.toUpperCase()})`
         const whatsappUrl = `${SOCIAL_LINKS.WHATSAPP}?text=${encodeURIComponent(message)}`
         window.open(whatsappUrl, '_blank', 'noopener,noreferrer')
     }
@@ -60,12 +80,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
                     {getFormatPrice(calculateSavings(originalPrice, salePrice))}
                 </p>
 
-                <button
-                    className="arrival-buy-now-button"
-                    onClick={handleBuyNow}
-                >
-                    Buy now
-                </button>
+                <div className="arrival-card-cta">
+                    <button
+                        className={`arrival-add-to-cart-button${isInCart ? ' in-cart' : ''}`}
+                        onClick={handleAddToCart}
+                    >
+                        {isInCart ? 'Go to Cart' : 'Add to Cart'}
+                    </button>
+                    <button
+                        className="arrival-buy-now-button"
+                        onClick={handleBuyNow}
+                    >
+                        Buy Now
+                    </button>
+                </div>
             </div>
         </div>
     )
